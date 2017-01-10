@@ -94,6 +94,12 @@ fi
 
 PATH=/home/valentin/PhpStorm/bin:$PATH
 
+# below code for shorten shell prompt's path
+# for more information check :
+#
+# http://stackoverflow.com/questions/3497885/code-challenge-bash-prompt-path-shortener
+# (orginated from)
+
 _dir_chomp () {
 	local IFS=/ c=1 n d
 	local p=(${1/#$HOME/\~}) r=${p[*]}
