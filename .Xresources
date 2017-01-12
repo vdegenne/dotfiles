@@ -1,10 +1,10 @@
-URxvt.font: xft:Inconsolata:size=14
-!URxvt.letterSpace: -4
+URxvt.font: xft:Monaco:size=16
+URxvt.letterSpace: 0.4
 !URxvt.lineSpace: -4
 URxvt.scrollBar: false
 
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/f800
+urxvt*background: rgba:0000/0000/0200/fb00
 
 URxvt*background:		#101218
 URxvt*foreground:		#d1d4e0
