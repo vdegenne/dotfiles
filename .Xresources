@@ -4,40 +4,61 @@ URxvt.letterSpace: 0.4
 URxvt.scrollBar: false
 
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/fb00
+urxvt*background: rgba:0000/0000/0200/f300
 
-URxvt*background:		#101218
+URxvt*background:		#000000
 URxvt*foreground:		#d1d4e0
 URxvt*cursorColor:		#d1d4e0
 URxvt*scrollColor:		#d1d4e0
 URxvt*highlightColor:		#252936
 URxvt*highlightTextColor:	#C0C5CE
 
-URxvt*color0:			#101218
-URxvt*color1:			#ee829f
+
+! ?
+URxvt*color0:			#0000ff
+! values
+URxvt*color1:			#fb8c00
 ! symLinks background
 URxvt*color2:			#a5ffe1
-URxvt*color3:			#ffefcc
-URxvt*color4:			#97bbf7
-URxvt*color5:			#c0b7f9
-URxvt*color6:			#97e0ff
-URxvt*color7:			#d1d4e0
-URxvt*color8:			#7780a1
-URxvt*color9:			#ee829f
-! PS1
+! ?
+URxvt*color3:			#0000ff
+! writeable directory fg + first line of scripts ?
+URxvt*color4:			#00ff00
+! `command`
+URxvt*color5:			#ba68c8
+! ?
+URxvt*color6:			#0000ff
+! ?
+URxvt*color7:			#0000ff
+! ?
+URxvt*color8:			#0000ff
+! changed but i dont know
+URxvt*color9:			#fb8c00
+! PS1 (light green)
 URxvt*color10:			#00ff00
-URxvt*color11:			#ffefcc
-URxvt*color12:			#97bbf7
-URxvt*color13:			#c0b7f9
-URxvt*color14:			#97e0ff
-URxvt*color15:			#ffffff
+! ?
+URxvt*color11:			#0000ff
+! directories color
+URxvt*color12:			#0000ff
+! ?
+URxvt*color13:			#0000ff
+! ?
+URxvt*color14:			#0000ff
+! ?
+URxvt*color15:			#0000ff
 
-URxvt*color16:			#f99170
-URxvt*color17:			#fcc09e
-URxvt*color18:			#1f222d
-URxvt*color19:			#252936
-URxvt*color20:			#C0C5CE
-URxvt*color21:			#C9CCDB
+! ?
+URxvt*color16:			#0000ff
+! ?
+URxvt*color17:			#0000ff
+! ?
+URxvt*color18:			#0000ff
+! ?
+URxvt*color19:			#0000ff
+! ?
+URxvt*color20:			#0000ff
+! ?
+URxvt*color21:			#0000ff
 
 
 rofi.color-normal: #2e3440,  #ffffff,  #2e3440,  #2e3440,  #8d7ebb
