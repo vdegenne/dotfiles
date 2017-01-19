@@ -43,7 +43,7 @@ if [ "$PS1" ]; then
   # and console windows
   # If you want to do so, just add e.g.
   # if [ "$PS1" ]; then
-  #   PS1="[\u@\h:\l \W]\\$ "
+  #   ps1="[\u@\h:\l \W]\\$ "
   # fi
   # to your custom modification shell script in /etc/profile.d/ directory
 fi
@@ -115,3 +115,5 @@ _dir_chomp () {
 }
 
 PS1='\[\033[01;32m\]$(_dir_chomp "$(pwd)" 3) \$\[\033[00m\] '
+
+VHOME='/home/valentin/'

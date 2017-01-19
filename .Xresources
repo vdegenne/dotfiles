@@ -4,7 +4,7 @@ URxvt.letterSpace: 0.4
 URxvt.scrollBar: false
 
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/f300
+urxvt*background: rgba:0000/0000/0200/fa00
 
 URxvt*background:		#000000
 URxvt*foreground:		#d1d4e0
