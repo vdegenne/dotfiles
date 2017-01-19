@@ -1,4 +1,7 @@
 #!/usr/bin/bash
+# this script is used to gather all the files
+# defined in the array 'files' into the directory
+# where the script got fired from
 
 files=(
     '/etc/bashrc'
