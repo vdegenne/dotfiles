@@ -90,30 +90,3 @@ if ! shopt -q login_shell ; then # We're not a login shell
     unset -f pathmunge
 fi
 # vim:ts=4:sw=4
-
-
-PATH=/home/valentin/PhpStorm/bin:$PATH
-
-# below code for shorten shell prompt's path
-# for more information check :
-#
-# http://stackoverflow.com/questions/3497885/code-challenge-bash-prompt-path-shortener
-# (orginated from)
-
-_dir_chomp () {
-	local IFS=/ c=1 n d
-	local p=(${1/#$HOME/\~}) r=${p[*]}
-	local s=${#r}
-	while ((s > $2 && c < ${#p[*]} - 1))
-	do
-		d=${p[c]}
-		n=1; [[ $d = .* ]] && n=2
-		((s -= ${#d} - n))
-		p[c++]=${d:0:n}
-	done
-	echo "${p[*]}"
-}
-
-PS1='\[\033[01;32m\]$(_dir_chomp "$(pwd)" 3) \$\[\033[00m\] '
-
-VHOME='/home/valentin/'

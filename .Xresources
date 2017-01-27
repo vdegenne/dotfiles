@@ -1,65 +1,16 @@
 URxvt.font: xft:Monaco:size=16
 URxvt.letterSpace: 0.4
-!URxvt.lineSpace: -4
-URxvt.scrollBar: false
+!urxvt.lineSpace: -4
+urxvt.scrollBar: false
 
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0200/fa00
+urxvt*foreground: #d1d4e0
 
-URxvt*background:		#000000
-URxvt*foreground:		#d1d4e0
-URxvt*cursorColor:		#d1d4e0
-URxvt*scrollColor:		#d1d4e0
-URxvt*highlightColor:		#252936
-URxvt*highlightTextColor:	#C0C5CE
+urxvt*color23: #000000
 
 
-! ?
-URxvt*color0:			#0000ff
-! values
-URxvt*color1:			#fb8c00
-! symLinks background
-URxvt*color2:			#a5ffe1
-! ?
-URxvt*color3:			#0000ff
-! writeable directory fg + first line of scripts ?
-URxvt*color4:			#00ff00
-! `command`
-URxvt*color5:			#ba68c8
-! ?
-URxvt*color6:			#0000ff
-! ?
-URxvt*color7:			#0000ff
-! ?
-URxvt*color8:			#0000ff
-! changed but i dont know
-URxvt*color9:			#fb8c00
-! PS1 (light green)
-URxvt*color10:			#00ff00
-! ?
-URxvt*color11:			#0000ff
-! directories color
-URxvt*color12:			#0000ff
-! ?
-URxvt*color13:			#0000ff
-! ?
-URxvt*color14:			#0000ff
-! ?
-URxvt*color15:			#0000ff
-
-! ?
-URxvt*color16:			#0000ff
-! ?
-URxvt*color17:			#0000ff
-! ?
-URxvt*color18:			#0000ff
-! ?
-URxvt*color19:			#0000ff
-! ?
-URxvt*color20:			#0000ff
-! ?
-URxvt*color21:			#0000ff
-
-
-rofi.color-normal: #2e3440,  #ffffff,  #2e3440,  #2e3440,  #8d7ebb
-rofi.color-window: #2e3440, #2e3440, #2e3440
+! tab mode
+URxvt.perl-ext-common:
+! next line is used to disable some undesired urxvt keystrokes  in emacs
+URxvt.perl-ext:
