@@ -11,12 +11,13 @@
 (package-initialize)
 
 (add-to-list 'load-path
-             "c:/Users/val/AppData/Roaming/.emacs.d/modes")
+             "~/.emacs.d/modes")
 
 
 (ido-mode)
 (require 'yasnippet)
 (yas-global-mode 1)
+
 
 (global-auto-revert-mode t)
 
@@ -30,10 +31,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
+ '(custom-enabled-themes (quote (tsdh-dark)))
  '(js-indent-level 2)
- '(package-selected-packages (quote (yasnippet)))
+ '(package-selected-packages (quote (php-mode goto-last-change yasnippet)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
+ '(truncate-lines t)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2)
@@ -44,7 +49,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :foundry "outline" :slant normal :weight normal :height 143 :width normal)))))
+ '(default ((t (:family "Monaco" :foundry "APPL" :slant normal :weight normal :height 181 :width normal)))))
 
 
 (setq-default indent-tabs-mode nil)
@@ -60,3 +65,14 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+
+
+;; test my function
+(defun un-camelcase-string (s &optional sep start)
+  (let ((case-fold-search nil))
+    (while (string-match "[A-Z]" s (or start 1))
+      (setq s (replace-match (concat (or sep "-")
+                                     (downcase (match-string 0 s)))
+                             t nil s)))
+    (downcase s)))

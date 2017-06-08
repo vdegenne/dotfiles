@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: polyClass
+# key: polyclass
+# --
+class ${1:className} extends Polymer.Element
+{
+  static get is () { return '${1:$(un-camelcase-string yas/text)}'; }
+
+  $0
+}
+
+customElements.define($1.is, $1);

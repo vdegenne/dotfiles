@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import
+# key: import
+# --
+<link rel="import" href="${1:/components/bower_components/}${2:element}/${3:$2}.html">

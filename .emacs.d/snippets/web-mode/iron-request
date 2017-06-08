@@ -1,16 +1,16 @@
 # -*- mode: snippet -*-
-# name: ironrequest
-# key: ironrequest
+# name: iron-request
+# key: ironreq
 # --
 var request = document.createElement('iron-request');
 
-request.completes.then(req => {
+request.completes.then((${2:req}) => {
 
-  ${1:code}
+  $0
 
 }).catch(err => { console.log(err); });
 
 request.send({
-  url: ${0:url},
+  url: '${1:url}',
   handleAs: 'json'
 });
