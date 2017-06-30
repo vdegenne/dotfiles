@@ -4,16 +4,18 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
+; ctrl+s (search in the page)
+^s::
+  send, {ctrl down}f{ctrl up}
+Return
 
 
 ; EMACS KEYSTROKES FOR WINDOWS
 
-#IfWinNotActive ahk_class Emacs
-
 ; ctrl+n (going one step down)
 ^n::
-  send, {Down down}{Down up}
-Return
+  send, {down down}{down up}
+return
 
 ; ctrl+p (going one step up)
 ^p::
@@ -32,7 +34,9 @@ Return
 
 ; ctrl+f (one step forward on the line)
 ^f::
-  send, {Right down}{Right up}
+  send, {Right down}
+  keywait, f
+  send, {Right up}
 Return
 
 ; ctrl+b (one step backward on the line)
@@ -55,19 +59,10 @@ Return
   send, {Ctrl down}v{ctrl up}
 Return
 
-#IfWinNotActive
-
 
 
 
 ; CHROME SPECIFICS
-
-#ifWinActive ahk_class Chrome_WidgetWin_1
-
-; ctrl+s (search in the page)
-^s::
-  send, {ctrl down}f{ctrl up}
-Return
 
 ; alt+a (previous page)
 !a::
@@ -79,7 +74,10 @@ Return
   send, {alt down}{right down}{right up}{alt up}
 Return
 
-#ifWinActive
+^g::
+  send, {esc}{shift down}{Tab down}{Tab up}{shift up}
+return
+
 
 
 
