@@ -1,0 +1,12 @@
+# key: valrequest
+# name: Valentin.request
+# --
+Valentin.request(${1:url}, request => {
+  let feedback = request.response;
+
+  Valentin.toast(this, feedback.message, feedback.type);
+
+  if (feedback.type) {
+    $0
+  }
+});

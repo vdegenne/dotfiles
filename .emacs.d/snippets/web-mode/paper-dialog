@@ -1,0 +1,11 @@
+# key: paperdialog
+# name: paper-dialog
+# --
+<paper-dialog modal id="$1">
+  <h2>${2:title}</h2>
+  $0
+  <div class="buttons">
+    <paper-button${3: on-click="${4:callback}"}>OK</paper-button>
+    <paper-button dialog-dismiss>Cancel</paper-button>
+  </div>
+</paper-dialog>

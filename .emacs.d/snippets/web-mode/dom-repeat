@@ -1,0 +1,8 @@
+# key: domrepeat
+# name: dom-repeat
+# --
+<dom-repeat>
+  <template is="dom-repeat" items="${1:array}"${2: as="${3:item}"}>
+    $0
+  </template>
+</dom-repeat>

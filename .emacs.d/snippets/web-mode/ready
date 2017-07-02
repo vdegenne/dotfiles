@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ready
+# key: ready
+# --
+ready () {
+  super.ready();
+  $0
+}

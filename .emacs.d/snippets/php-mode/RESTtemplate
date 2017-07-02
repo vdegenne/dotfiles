@@ -1,0 +1,18 @@
+# key: RESTpage
+# name: RESTtemplate
+# --
+<?php
+header('Content-Type: application/json');
+
+use \vdegenne\REST;
+use \vdegenne\Feedback;
+
+
+$Feedback = new Feedback;
+
+switch (REST::get_request_method()) {
+
+case REST::$1:
+    $0
+    break;
+}

@@ -2,15 +2,14 @@
 # name: iron-request
 # key: ironreq
 # --
-var request = document.createElement('iron-request');
-
-request.completes.then((${2:req}) => {
+let r = document.createElement('iron-request');
+r.completes.then(${2:request} => {
 
   $0
 
-}).catch(err => { console.log(err); });
+}).catch(err => console.log(err));
 
-request.send({
+r.send({
   url: '${1:url}',
   handleAs: 'json'
 });
