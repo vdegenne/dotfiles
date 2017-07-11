@@ -8,8 +8,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;  Send, {vk15sc1F2}
 ;return
 
-#IfWinNotActive, ahk_exe Emacs.exe
-
+GroupAdd, Group1, ahk_exe Emacs.exe
+GroupAdd, Group1, ahk_exe netbeans.exe
+return
+	
+#IfWinNotActive, ahk_group Group1
 
 ; NAVIGATIONS
 !f::Send, {LAlt Up}{Right}{LAlt Down}{LControl Down}
@@ -22,6 +25,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ^e::Send, {LControl Up}{End}{LControl Down}
 ; !+<::Send, {LAlt Up}{Shift Up}{Home}{Shift Down}{LAlt Down}
 ; !+>::Send, {LAlt Up}{Shift Up}{End}{Shift Down}{LAlt Down}
+
 
 ; COPY & PASTE
 ^y::^v
