@@ -1,88 +1,43 @@
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
-; ctrl+s (search in the page)
-^s::
-  send, {ctrl down}f{ctrl up}
-Return
+;LShift & space::
+;  Send, {vk15sc1F2}
+;return
+
+#IfWinNotActive, ahk_exe Emacs.exe
 
 
-; EMACS KEYSTROKES FOR WINDOWS
+; NAVIGATIONS
+!f::Send, {LAlt Up}{Right}{LAlt Down}{LControl Down}
+!b::Send, {LAlt Up}{Left}{LAlt Down}{LControl Down}
+^n::Send, {LControl Up}{Down}{LControl Down}
+^p::Send, {LControl Up}{Up}{LControl Down}
+^f::Send, {LControl Up}{Right}{LControl Down}
+^b::Send, {LControl Up}{Left}{LControl Down}
+^a::Send, {LControl Up}{Home}{LControl Down}
+^e::Send, {LControl Up}{End}{LControl Down}
+; !+<::Send, {LAlt Up}{Shift Up}{Home}{Shift Down}{LAlt Down}
+; !+>::Send, {LAlt Up}{Shift Up}{End}{Shift Down}{LAlt Down}
 
-; ctrl+n (going one step down)
-^n::
-  send, {down down}{down up}
-return
-
-; ctrl+p (going one step up)
-^p::
-  send, {Up down}{Up up}
-Return
-
-; ctrl+e (going to the end of the line)
-^e::
-  send, {End down}{End up}
-Return
-
-; ctrl+a (going to the beginning of the line)
-^a::
-  send, {Home down}{Home up}
-Return
-
-; ctrl+f (one step forward on the line)
-^f::
-  send, {Right down}
-  keywait, f
-  send, {Right up}
-Return
-
-; ctrl+b (one step backward on the line)
-^b::
-  send, {Left down}{Left up}
-Return
-
-; alt+b (one word backward  on the line)
-!b::
-  send, {ctrl down}{left down}{left up}{ctrl up}
-Return
-
-; ctrl+k (kill and copy the text before cursor)
-^k::
-  send, {Shift down}{End down}{End up}{Shift up}{ctrl down}c{ctrl up}{del}
-Return
-
-; ctrl+y (paste the copied text)
-^y::
-  send, {Ctrl down}v{ctrl up}
-Return
+; COPY & PASTE
+^y::^v
+^k::Send {LControl Up}+{end}^c{del}{LControl Down}
 
 
-
-
-; CHROME SPECIFICS
-
-; alt+a (previous page)
-!a::
-  send, {alt down}{left down}{left up}{alt up}
-Return
-
-; alt+e (next page)
-!e::
-  send, {alt down}{right down}{right up}{alt up}
-Return
-
-^g::
-  send, {esc}{shift down}{Tab down}{Tab up}{shift up}
+; FOR KOREAN KEYBOARD, SWITCH TO KOREAN
+LCtrl & \::
+  Send, {vk15sc1F2}
 return
 
 
+; FOR CHROME
+#IfWinActive, ahk_exe chrome.exe
+; REPLACING SEARCH
+^s::^f
+; CANCEL URL BAR
+^g::Send, {LControl Up}{Esc}+{Tab}{LControl Down}
 
-
-; GET THE WINDOW'S CLASS
-+#q::
-  WinGetClass, class, A
-  MsgBox, The active window's class is "%class%".
-return
