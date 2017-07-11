@@ -23,7 +23,7 @@
 
 
 (global-set-key (kbd "S-SPC") nil)
-
+(global-set-key (kbd "C-x /") 'comment-region)
 
 
 (custom-set-variables
@@ -31,9 +31,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
- '(custom-enabled-themes (quote (tsdh-dark)))
+ '(custom-enabled-themes (quote (deeper-blue)))
  '(js-indent-level 2)
  '(package-selected-packages (quote (php-mode goto-last-change yasnippet)))
  '(scroll-bar-mode nil)
@@ -42,7 +44,7 @@
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2)
- '(web-mode-script-padding 2)
+ '(web-mode-script-padding 0)
  '(web-mode-style-padding 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

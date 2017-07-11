@@ -1,0 +1,7 @@
+# key: dispatchEvent
+# name: dispatchEvent
+# --
+this.dispatchEvent(
+  new CustomEvent('${1:eventName}',
+                  { detail: { ${2:detail} },
+                    bubbles: true, composed: true}));$0

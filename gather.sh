@@ -9,12 +9,13 @@ shopt -s extglob
 # notify the script using an ending slash
 files=(
     '/[etc/bashrc]'
+    '/[etc/profile.d/unfreeze_search.sh]'
     '/[usr/share/fonts/Monaco/Monaco.ttf]'
     '/home/valentin/[.config/i3/config]'
     '/home/valentin/[.irssi/]'
     '/home/valentin/[.Xresources]'
     '/root/[.emacs]'
-    '/root/[.emacs.d/]'
+    '/root/[.emacs.d/snippets]'
 )
 
 
