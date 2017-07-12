@@ -14,6 +14,7 @@ files=(
     '/home/valentin/[.config/i3/config]'
     '/home/valentin/[.irssi/]'
     '/home/valentin/[.Xresources]'
+    '/home/valentin/[.urxvt/ext]'
     '/root/[.emacs]'
     '/root/[.emacs.d/snippets]'
 )
