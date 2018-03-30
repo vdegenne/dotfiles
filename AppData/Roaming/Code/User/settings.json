@@ -1,0 +1,20 @@
+{
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.commandsToSkipShell": [],
+    "extensions.ignoreRecommendations": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.menuBarVisibility": "toggle",
+    "editor.formatOnPaste": true,
+    "workbench.iconTheme": "vscode-great-icons",
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "editor.minimap.enabled": false,
+    "explorer.autoReveal": false,
+    "editor.mouseWheelZoom": true,
+    "files.autoSave": "onFocusChange"
+}
