@@ -1,0 +1,30 @@
+// note: Originally using the mingw64 but the bash windows integration works like a charm in VSCode
+{
+    //"workbench.startupEditor": "newUntitledFile",
+
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.terminal.toggleTerminal"
+    ],
+    "editor.suggestSelection": "first",
+    "extensions.ignoreRecommendations": true,
+
+    "window.zoomLevel": 1,
+    "editor.mouseWheelZoom": true,
+    "window.menuBarVisibility": "hidden",
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+
+    "editor.minimap.enabled": false,
+    //"explorer.autoReveal": false,
+    "clang-format.style": "file",
+
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+}
