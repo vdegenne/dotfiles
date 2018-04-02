@@ -1,10 +1,10 @@
-// note: Originally using the mingw64 but the bash windows integration works like a charm in VSCode
+// To use along with "Emacs Friendly Keymap" (Leaping Frog Studios)
 {
     //"workbench.startupEditor": "newUntitledFile",
 
     "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    
+
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
     "editor.renderWhitespace": "all",
     "terminal.integrated.commandsToSkipShell": [
