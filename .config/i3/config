@@ -31,6 +31,7 @@ font pango:Monaco 10
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
@@ -94,20 +95,20 @@ bindsym $mod+q focus parent
 bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+ampersand workspace 1
-bindsym $mod+eacute workspace 2
-bindsym $mod+quotedbl workspace 3
-bindsym $mod+apostrophe workspace 4
-bindsym $mod+parenleft workspace 5
-bindsym $mod+minus workspace 6
-bindsym $mod+egrave workspace 7
-bindsym $mod+underscore workspace 8
-bindsym $mod+ccedilla workspace 9
-bindsym $mod+agrave workspace 10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3  workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+10 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+eacute move container to workspace 2
+bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
@@ -179,8 +180,8 @@ bar {
 }
 
 
-# exec_always feh --bg-scale /home/valentin/Pictures/.wallpapers/6816306-wood-floor-texture.jpg
-exec_always compton -bGf --sw-opti
+exec_always feh --bg-tile ~/Pictures/ny.jpg
+#exec_always compton -bGf --sw-opti
 
 
-bindsym $mod+p exec scrot '%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Pictures/'
+#bindsym $mod+p exec scrot '%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Pictures/'
