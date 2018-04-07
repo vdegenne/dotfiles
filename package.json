@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "clang-format": "^1.0.41-c",
+    "mkdirp": "^0.5.1"
+  },
+  "scripts": {
+    "format": "find . -iname '*.js' -not -path '*node_modules*' -exec clang-format --style=file -i {} +"
+  }
+}
