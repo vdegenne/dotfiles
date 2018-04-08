@@ -1,0 +1,54 @@
+urxvt.font: xft:Monaco:size=18
+URxvt.letterSpace: 0.4
+!urxvt.lineSpace: -4
+urxvt.scrollBar: false
+
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/fa00
+urxvt*foreground: #d1d4e0
+
+URxvt*color1: #ee0000
+URxvt*color2: #ee0000
+URxvt*color3: #ee0000
+URxvt*color4: #ee0000
+URxvt*color5: #ee0000
+URxvt*color6: #ee0000
+URxvt*color7: #ee0000
+URxvt*color8: #ee0000
+URxvt*color9: #ee0000
+URxvt*color10: #ee0000
+URxvt*color11: #ee0000
+URxvt*color12: #ee0000
+URxvt*color13: #ee0000
+URxvt*color14: #ee0000
+URxvt*color15: #ee0000
+
+
+! XTerm.vt100.reverseVideo: true
+! XTerm.vt100.color0: rgb:28/28/28
+! XTerm.vt100.color1: rgb:28/28/28
+! XTerm.vt100.color2: rgb:28/28/28
+! XTerm.vt100.color3: rgb:28/28/28
+! XTerm.vt100.color4: rgb:28/28/28
+! XTerm.vt100.color5: rgb:28/28/28
+! XTerm.vt100.color6: rgb:28/28/28
+! XTerm.vt100.color7: rgb:28/28/28
+! XTerm.vt100.color8: rgb:28/28/28
+! XTerm.vt100.color9: rgb:28/28/28
+! XTerm.vt100.color10: rgb:28/28/28
+! XTerm.vt100.color11: rgb:28/28/28
+! XTerm.vt100.color12: rgb:28/28/28
+! XTerm.vt100.color13: rgb:28/28/28
+! XTerm.vt100.color14: rgb:28/28/28
+! XTerm.vt100.color15: rgb:28/28/28
+
+
+! tab mode
+URxvt.perl-ext-common: font-size,my-extension,resize-font
+! next line is used to disable some undesired urxvt keystrokes  in emacs
+URxvt.perl-ext:
+
+URxvt.font-size.step:   4
+
+! URxvt.keysym.C-minus:    font-size:decrease
+! URxvt.keysym.C-equal:     font-size:increase
