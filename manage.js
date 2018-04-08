@@ -17,6 +17,7 @@ const files = [
   '/[etc/profile.d/ps1-module.sh]',
   // X & i3
   '~/[.config/i3/config]',
+  '/[etc/i3status.conf]',
   '~/[.Xresources]',
   // fonts
   '/[usr/share/fonts/Monaco.ttf]',
