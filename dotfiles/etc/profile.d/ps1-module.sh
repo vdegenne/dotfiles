@@ -117,4 +117,5 @@ fi
 
 # without user
 # PS1="\n\[\e[0;38;5;49;48;5;232m\]\$(minimizePwd \$(pwd) 3)\[\e[0;38;5;240m\]\$(showBranch) \[\e[0;38;5;221m\]\n$prompt>\[\e[0m\] "
-PS1="\[\e[1;34m\]\w\[\e[38;5;227m\]\$(showBranchNude) \[\e[32m\]\$prompt\[\e[0m\] "
+#PS1="\[\e[1;34m\]\w\[\e[38;5;227m\]\$(showBranchNude) \[\e[32m\]\$prompt\[\e[0m\] "
+PS1="\[\e[1;34m\]\$(minimizePwd \$(pwd) 3)\[\e[38;5;227m\]\$(showBranchNude) \[\e[32m\]\$prompt\[\e[0m\] "

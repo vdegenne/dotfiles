@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # variables #
-ghub='https://github.com/'
+ghub='https://github.com'
 mghub='https://github.com/vdegenne'
 kmsufi='5.39.79.61'
 
