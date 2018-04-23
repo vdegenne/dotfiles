@@ -12,7 +12,8 @@ const dotFilesBasedir = './dotfiles';
 const files = [
   // bash & shells
   '/[etc/profile]',
-  '/[etc/bash.bashrc]',
+  '/[etc/bash.bashrc]', // for debian
+  '/[etc/bashrc]', // for fedora
   '/[etc/profile.d/shared-objects.sh]',
   '/[etc/profile.d/ps1-module.sh]',
   // X & i3
