@@ -19,12 +19,14 @@ const files = [
   '~/[.config/i3/config]',
   '/[etc/i3status.conf]',
   '~/[.Xresources]',
+  '/[etc/X11/xorg.conf.d/00-keyboard.conf]',
   // fonts
   '/[usr/share/fonts/Monaco.ttf]',
   // Editors
   '~/[.emacs]',
   '~/[.emacs.d/snippets/]',
   '~/[.config/Code/User/]',
+  '~/[.config/Code/User/snippets/]',
   // IRC
   '~/[.irssi/]'
 ];
@@ -104,7 +106,7 @@ class API {
   static async getAllFiles(path) {
     try {
       const filter = fs.readdirSync(path).filter(
-          f => !fs.lstatSync(`${path}/${f}`).isDirectory());
+        f => !fs.lstatSync(`${path}/${f}`).isDirectory());
       return filter;
     } catch (e) {
       if (e.code == 'ENOENT') {
