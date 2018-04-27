@@ -12,10 +12,11 @@
   ],
   "editor.suggestSelection": "first",
   "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 0,
+  "explorer.openEditors.visible": 0,
+  "window.zoomLevel": 2,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
-  "workbench.activityBar.visible": true,
+  "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "left",
   "editor.minimap.enabled": false,
   "explorer.autoReveal": false,
@@ -29,6 +30,7 @@
   "scm.diffDecorations": "none",
   /*     "editor.glyphMargin": false, */
   "editor.folding": true,
+  "workbench.colorTheme": "Perfect Dark",
   "editor.suggestOnTriggerCharacters": false,
   "editor.quickSuggestions": {
     "other": true,
@@ -37,7 +39,6 @@
   },
   "editor.parameterHints": false,
   "editor.wordWrap": "on",
-  "window.title": "${rootName}",
-  "workbench.colorTheme": "Perfect Dark",
-  "workbench.iconTheme": "easy-icons"
+  "workbench.iconTheme": "easy-icons",
+  "window.title": "${rootName}"
 }
