@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-commands=()
+if [ -z ${MSERVER} ]; then
+    echo 2>&1 'environment variable MSERVER is not defined' && exit 1
+fi
+if [ $# -eq 0 ]; then
+    echo 2>&1 'provide at least one argument' && exit 1
+fi
 
+
+# needed commands
+commands=()
 hash curl 2>/dev/null || commands+=('curl')
 hash jq 2>/dev/null || commands+=('jq')
 hash xclip 2>/dev/null || commands+=('xclip')
@@ -10,6 +18,11 @@ if [ ${#commands[*]} -gt 0 ]; then
     apt-get install -y ${commands[*]}
 fi
 
-PSS="$(curl -s 5.39.79.61:3001?$1 -u vdegenne | jq '.message')"
-
-echo ${PSS:1:-1} | xclip -selection c
+set -e
+if response="$(curl -s $MSERVER:3001?$1 -u vdegenne)"; then
+    # pss=$(jq '.message' <<<$response)
+    echo $response | jq '.message' | awk '{print substr($0, 2, length($0) - 2)}' | xclip -selection c
+    echo 'copied to clipboard!'
+else
+    echo 2>&1 'something went wrong while fetching' && exit 1
+fi

@@ -4,12 +4,8 @@
 ghub='https://github.com'
 mghub='https://github.com/vdegenne'
 kmsufi='5.39.79.61'
+mserver='5.39.79.61'
 
-
-# mkdir and go #
-mkddir () {
-    mkdir "$1" && cd "$1"
-}
 
 # alias #
 alias ls='ls --color'
