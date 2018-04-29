@@ -13,6 +13,7 @@ const files = [
   // bins
   '/[usr/local/bin/install-docker]',
   '/[usr/local/bin/install-nodejs]',
+  '/[usr/local/bin/crytpage]',
   
   // bash & shells
   '/[etc/profile]',

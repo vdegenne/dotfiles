@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+commands=()
+
+hash curl 2>/dev/null || commands+=('curl')
+hash jq 2>/dev/null || commands+=('jq')
+hash xclip 2>/dev/null || commands+=('xclip')
+
+if [ ${#commands[*]} -gt 0 ]; then
+    apt-get install -y ${commands[*]}
+fi
+
+PSS="$(curl -s 5.39.79.61:3001?$1 -u vdegenne | jq '.message')"
+
+echo ${PSS:1:-1} | xclip -selection c
