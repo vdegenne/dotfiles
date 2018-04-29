@@ -12,6 +12,8 @@ const dotFilesBasedir = './dotfiles';
 const files = [
   // bins
   '/[usr/local/bin/install-docker]',
+  '/[usr/local/bin/install-nodejs]',
+  
   // bash & shells
   '/[etc/profile]',
   '/[etc/bash.bashrc]', // for debian
