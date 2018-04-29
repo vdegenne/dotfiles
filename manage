@@ -10,6 +10,8 @@ const mkdirp = require('mkdirp');
 const dotFilesBasedir = './dotfiles';
 
 const files = [
+  // bins
+  '/[usr/local/bin/install-docker]',
   // bash & shells
   '/[etc/profile]',
   '/[etc/bash.bashrc]', // for debian
