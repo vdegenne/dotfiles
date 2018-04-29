@@ -1,10 +1,9 @@
 #!/usr/bin/bash
 
 # variables #
-ghub='https://github.com'
-mghub='https://github.com/vdegenne'
-kmsufi='5.39.79.61'
-mserver='5.39.79.61'
+GHUB='https://github.com'
+MGHUB='https://github.com/vdegenne'
+MSERVER='5.39.79.61'
 
 
 # alias #
