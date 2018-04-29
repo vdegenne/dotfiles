@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 # variables #
-GHUB='https://github.com'
-MGHUB='https://github.com/vdegenne'
-MSERVER='5.39.79.61'
+export GHUB='https://github.com'
+export MGHUB='https://github.com/vdegenne'
+export MSERVER='5.39.79.61'
 
 
 # alias #
