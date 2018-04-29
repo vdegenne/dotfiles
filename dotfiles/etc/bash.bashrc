@@ -71,3 +71,6 @@ fi
 # Ceci permet de libérer l'entrée CTRL+s lors des recherches
 # sinon ça freeze.
 stty -ixon
+
+
+PATH=$PATH:/usr/local/bin/mybins
