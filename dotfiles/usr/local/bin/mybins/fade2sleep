@@ -1,0 +1,58 @@
+#!/usr/bin/node
+
+/* imports */
+const {execSync} = require('child_process');
+
+/* vars */
+let currentVolume;
+let seconds;
+let divisor;
+let intensity;
+let stepWatcher = 0;
+let accumulates = 0;
+
+
+
+const minutes = process.argv[2];
+if (!minutes) {
+  console.error('needs minutes');
+  process.exit(1);
+}
+seconds = minutes * 60 * 1000;
+// divisor
+divisor = seconds / 1000;
+
+currentVolume = getCurrentVolume();
+// intensity (the intensity for decreasing)
+intensity = currentVolume / divisor;
+
+
+let decreaseLoop;
+(decreaseLoop = () => {
+  if (!currentVolume)
+    return;
+
+  // because the command only allow 1- decrease
+  // we have to watch for integer-like steps
+  let decrease = 0;
+  accumulates += intensity;
+  if (Math.floor(accumulates) !== stepWatcher) {
+    decrease = 1;
+    stepWatcher = Math.floor(accumulates);
+  }
+
+  if (decrease) {
+    execSync('amixer set Master 1%-');
+    currentVolume = getCurrentVolume();
+    console.info(`current: ${currentVolume}%`);
+  }
+  
+  setTimeout(decreaseLoop, 1000);
+})();
+
+
+function getCurrentVolume () {
+  const currentVolumeCommand = `amixer get Master | grep 'Front Left:' | awk '{print substr($5, 2, length($5) - 3)}'`;
+  const stdout = execSync(currentVolumeCommand);
+  return parseInt(stdout.toString().replace(/\n/g, ''));
+}
