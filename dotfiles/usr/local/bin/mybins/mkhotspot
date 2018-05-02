@@ -33,3 +33,5 @@ if ! nmcli con up $1; then
     echoerr "something went wrong while trying to activate $1"
     exit 1
 fi
+
+echo "type 'nmcli dev wifi connect $1 --ask' on the other computer"
