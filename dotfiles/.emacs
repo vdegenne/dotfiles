@@ -30,11 +30,11 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
- '(custom-enabled-themes (quote (tsdh-light)))
+ '(custom-enabled-themes (quote (adwaita)))
  '(global-visual-line-mode t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (markdown-mode ivy sokoban)))
+ '(package-selected-packages (quote (ivy sokoban)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(truncate-lines t))

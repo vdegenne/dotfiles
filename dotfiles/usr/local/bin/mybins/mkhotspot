@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -e
+
+echoerr() {
+  printf "%s\n" "$*" >&2
+}
+
+wifidev=$(nmcli dev | grep ^wl | awk '{print $1}')
+
+if [ -z $wifidev ]; then
+    echoerr "no wifi device detected"
+    exit 1
+fi
+
+if [ -z $1 ]; then
+    echoerr "needs one argument (the name of the hotspot you'd like to set)"
+    exit 1
+fi
+
+read -s -p 'Hotspot Password: ' password
+
+nmcli con add type wifi ifname $wifidev con-name $1 autoconnect yes ssid $1
+nmcli con modify $1 802-11-wireless.mode ap \
+      802-11-wireless.band bg \
+      ipv4.method shared \
+      wifi-sec.key-mgmt wpa-psk \
+      wifi-sec.psk $password
+
+echo "Activating $1.. please wait"
+sleep 1
+if ! nmcli con up $1; then
+    echoerr "something went wrong while trying to activate $1"
+    exit 1
+fi

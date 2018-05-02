@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+if [ -z $ghub ]; then
+    echo 'try to export $ghub first' >&2
+    exit 1
+elif [ -z $1 ]; then
+    echo 'needs one argument (the repo)' >&2
+    exit 1
+fi
+
+
+git clone "$ghub/$1"
+cd ${1##*/}
+exec bash
