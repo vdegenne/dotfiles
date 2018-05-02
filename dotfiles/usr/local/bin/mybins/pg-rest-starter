@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "appname: " appname
+read -p "dbname: " dbname
+read -p "dbuser: " dbuser
+read -s -p "dbpasswd: " dbpasswd
+
+github-fetch-starter -p dbname=$dbname dbuser=$dbuser dbpasswd=$dbpasswd -n $appname node-pg-rest-starter
+
+cd $appname
+exec bash

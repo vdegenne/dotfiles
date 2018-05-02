@@ -40,5 +40,7 @@
   "editor.parameterHints": true,
   "editor.wordWrap": "on",
   "workbench.iconTheme": "easy-icons",
-  "window.title": "${rootName}"
+  "window.title": "${rootName}",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": true
 }
