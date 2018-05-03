@@ -11,7 +11,7 @@ alias ls='ls --color'
 alias ll='ls -l --color'
 alias lla='ls -la --color'
 alias grep='grep --color'
-alias emacs='emacs -nw'
+alias emacs='emacs -nw -u vdegenne'
 
 
 

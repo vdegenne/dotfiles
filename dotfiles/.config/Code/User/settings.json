@@ -30,7 +30,7 @@
   "scm.diffDecorations": "none",
   /*     "editor.glyphMargin": false, */
   "editor.folding": true,
-  "workbench.colorTheme": "Perfect Dark",
+  "workbench.colorTheme": "Default Light+",
   "editor.suggestOnTriggerCharacters": false,
   "editor.quickSuggestions": {
     "other": true,
