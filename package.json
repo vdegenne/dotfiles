@@ -2,10 +2,12 @@
   "main": "dotfiles-manager.js",
   "scripts": {
     "start": "node dotfiles-manager.js",
+    "update": "sudo -u vdegenne ./dotfiles-manager.js update",
     "format": "find . -iname '*.js' -not -path '*node_modules*' | xargs clang-format-3.9 --style=file -i"
   },
   "dependencies": {
     "colors": "^1.2.1",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "readline-sync": "^1.4.9"
   }
 }
