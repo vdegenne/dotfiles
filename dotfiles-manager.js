@@ -22,7 +22,7 @@ class Manager {
 
       // check existence before proceeding
       if (!fs.existsSync(hostPath)) {
-        console.error(`"${hostPath}" not found.`.red);
+        console.error(`NOT FOUND ${hostPath}`.red);
         continue;
       }
 
@@ -46,8 +46,6 @@ class Manager {
         continue;
       }
 
-      continue;
-
       // we create the repo directory
       mkdirp.sync(repoDirpath);
 
@@ -57,19 +55,11 @@ class Manager {
         const repoFile = fs.createWriteStream(path.join(repoDirpath, file));
 
         hostFile.pipe(repoFile).on('finish', (o) => {
-          console.log(o);
+          console.info(`U ${hostPath + (isASet ? file : '')}`.green);
           hostFile.close();
           repoFile.close();
         });
       }
-
-      /*         ((stream, hostPath) => {
-                stream.on('finish', () => {
-                  wstream.end();
-                  console.log(`"${hostPath}" fetched~`.green);
-                });
-              })(wstream, hostPath);
-    }); */
     }
   }
 
@@ -80,7 +70,7 @@ class Manager {
 
     for (const p of paths) {
       let {hostPath, repoPath} = await hostAndRepoPaths(p);
-      repoPath = path.join(repoDirpath, repoPath);
+      repoPath = path.join(repoRootDirpath, repoPath);
       if (await hostNeedsUpdate(hostPath, repoPath)) {
         console.log(hostPath);
       }
