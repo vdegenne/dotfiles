@@ -53,11 +53,16 @@ class Manager {
 
       // we transfert the files
       for (const file of files) {
+        const repoFilepath = path.join(repoDirpath, file);
+        const isCreation = fs.existsSync(repoFilepath);
+
         const hostFile = fs.createReadStream(path.join(hostDirpath, file));
-        const repoFile = fs.createWriteStream(path.join(repoDirpath, file));
+        const repoFile = fs.createWriteStream(repoFilepath);
 
         hostFile.pipe(repoFile).on('finish', () => {
-          console.info(`U ${hostPath + (isASet ? file : '')}`.green);
+          console.info(
+              `${isCreation ? 'C' : 'U'} ${hostPath + (isASet ? file : '')}`
+                  .green);
           hostFile.close();
           repoFile.close();
         });
