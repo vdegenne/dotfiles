@@ -30,10 +30,10 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
- '(custom-enabled-themes (quote (adwaita)))
+ '(custom-enabled-themes (quote (tango)))
+ '(font-use-system-font t)
  '(global-visual-line-mode t)
  '(inhibit-startup-screen t)
- '(menu-bar-mode nil)
  '(package-selected-packages (quote (ivy sokoban)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
@@ -44,7 +44,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :height 120)))))
+ '(default ((t (:family "DejaVu Sans Mono" :height 179 :foundry "unknown" :slant normal :weight normal :width normal)))))
 
 
 ;; key redefinition

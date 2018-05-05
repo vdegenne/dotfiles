@@ -13,4 +13,3 @@ fi
 
 git clone "$ghub/$1"
 cd ${1##*/}
-exec bash

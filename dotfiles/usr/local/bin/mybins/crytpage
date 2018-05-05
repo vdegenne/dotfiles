@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z ${MSERVER} ]; then
+if [ -z $mserver ]; then
     echo 2>&1 'environment variable MSERVER is not defined' && exit 1
 fi
 if [ $# -eq 0 ]; then
@@ -19,7 +19,7 @@ if [ ${#commands[*]} -gt 0 ]; then
 fi
 
 set -e
-if response="$(curl -s $MSERVER:3001?$1 -u vdegenne)"; then
+if response="$(curl -s $mserver:3001?$1 -u vdegenne)"; then
     # pss=$(jq '.message' <<<$response)
     echo $response | jq '.message' | awk '{print substr($0, 2, length($0) - 2)}' | xclip -selection c
     echo 'copied to clipboard!'

@@ -13,7 +13,8 @@ alias lla='ls -la --color'
 alias grep='grep --color'
 alias emacs='emacs -nw -u vdegenne'
 
-
+alias gitclone='. gitclone $*'
+alias pg-rest-starter='. pg-rest-starter'
 
 # location tracing #
 spot () {
