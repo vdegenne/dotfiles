@@ -13,7 +13,7 @@
   "editor.suggestSelection": "first",
   "extensions.ignoreRecommendations": true,
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.visible": false,
@@ -41,6 +41,6 @@
   "editor.wordWrap": "on",
   "workbench.iconTheme": "easy-icons",
   "window.title": "${rootName}",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": true
 }

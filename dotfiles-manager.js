@@ -6,40 +6,16 @@ const util = require('util');
 const path = require('path');
 const mkdirp = require('mkdirp');
 
+const {getAllFiles, getPaths, hostAndRepoPaths, hostNeedsUpdate} =
+    require('./util');
 
+const repoDirpath = path.resolve('dotfiles');
 const dotFilesBasedir = './dotfiles';
-
-const files = [
-  // bins
-  '/[usr/local/bin/mybins/]',
-
-  // bash & shells
-  '/[etc/profile]',
-  '/[etc/bash.bashrc]', // for debian
-  '/[etc/bashrc]', // for fedora
-  '/[etc/profile.d/shared-objects.sh]',
-  '/[etc/profile.d/ps1-module.sh]',
-  // X & i3
-  '~/[.config/i3/config]',
-  '/[etc/i3status.conf]',
-  '~/[.Xresources]',
-  '/[etc/X11/xorg.conf.d/00-keyboard.conf]',
-  // fonts
-  '/[usr/share/fonts/Monaco.ttf]',
-  // Editors
-  '~/[.emacs]',
-  '~/[.emacs.d/snippets/]',
-  '~/[.config/Code/User/]',
-  '~/[.config/Code/User/snippets/]',
-  // IRC
-  '~/[.irssi/]'
-];
-
-
 const localPathRegExp = /\[(.*)\]/;
 
-class API {
-  static async gather() {
+
+class Manager {
+  static async gather(paths) {
     let f;
     let isASet;
     let hostPath, hostDir;
@@ -62,7 +38,7 @@ class API {
       // the file(s) to save
       let files = [];
       if (isASet) {
-        files = files.concat(await API.getAllFiles(hostPath));
+        files = files.concat(await getAllFiles(hostPath));
       } else {
         files.push(path.basename(hostPath));
       }
@@ -107,21 +83,37 @@ class API {
     }
   }
 
-  static async getAllFiles(path) {
-    try {
-      const filter = fs.readdirSync(path).filter(
-        f => !fs.lstatSync(`${path}/${f}`).isDirectory());
-      return filter;
-    } catch (e) {
-      if (e.code == 'ENOENT') {
-        return [];
+
+
+  static async update() {
+    const paths = await getPaths();
+
+    for (const p of paths) {
+      let {hostPath, repoPath} = await hostAndRepoPaths(p);
+      repoPath = path.join(repoDirpath, repoPath);
+      if (await hostNeedsUpdate(hostPath, repoPath)) {
+        console.log(hostPath);
       }
     }
   }
 }
+// for playing outside
+exports.Manager = Manager;
 
 
-API[process.argv[2]]();
 
-
-exports.api = API;
+/** COMMAND-LINE EXECUTION */
+(async() => {
+  try {
+    if (process.argv.length < 3) {
+      throw new Error('Needs name of the function.'.red);
+    }
+    if (Manager[process.argv[2]] === undefined) {
+      throw new Error(`The function doesn't exist.`.red);
+    }
+    await Manager[process.argv[2]]();
+  } catch (e) {
+    console.error(e.message);
+    process.exit(1);
+  }
+})();
