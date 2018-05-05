@@ -1,9 +1,8 @@
 {
   "main": "dotfiles-manager.js",
   "scripts": {
-    "start": "node dotfiles-manager.js",
-    "update": "sudo -u vdegenne ./dotfiles-manager.js update",
-    "format": "find . -iname '*.js' -not -path '*node_modules*' | xargs clang-format-3.9 --style=file -i"
+    "gather": "./dotfiles-manager.js gather",
+    "update": "sudo HOME=/home/vdegenne ./dotfiles-manager.js update"
   },
   "dependencies": {
     "colors": "^1.2.1",
