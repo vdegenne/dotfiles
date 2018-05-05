@@ -9,31 +9,30 @@ const mkdirp = require('mkdirp');
 const {getAllFiles, getPaths, hostAndRepoPaths, hostNeedsUpdate} =
     require('./util');
 
-const repoDirpath = path.resolve('dotfiles');
+const repoRootDirpath = path.resolve('dotfiles');
 const dotFilesBasedir = './dotfiles';
 const localPathRegExp = /\[(.*)\]/;
 
 
 class Manager {
-  static async gather(paths) {
-    let f;
-    let isASet;
-    let hostPath, hostDir;
-    let localPath, localDir;
+  static async gather() {
+    for (const p of await getPaths()) {
+      let {hostPath, repoPath} = await hostAndRepoPaths(p);
+      const isASet = hostPath.endsWith('/') ? true : false;
 
-    for (f of files) {
-      if (f.startsWith('~')) {
-        f = f.replace(/~/, process.env.HOME);
+      // check existence before proceeding
+      if (!fs.existsSync(hostPath)) {
+        console.error(`"${hostPath}" not found.`.red);
+        continue;
       }
 
-      // hostPath & hostDir (the computer)
-      hostPath = f.replace(/\[|\]/g, '');
-      isASet = hostPath.endsWith('/') ? true : false;
-      hostDir = isASet ? hostPath : path.dirname(hostPath);
+      // host
+      const hostDirpath = isASet ? hostPath : path.dirname(hostPath);
 
-      // localPath & localDir (saving repository)
-      localPath = path.resolve(dotFilesBasedir, localPathRegExp.exec(f)[1]);
-      localDir = isASet ? localPath : path.dirname(localPath);
+      // repo
+      repoPath = path.resolve(repoRootDirpath, repoPath);
+      const repoDirpath = isASet ? repoPath : path.dirname(repoPath);
+
 
       // the file(s) to save
       let files = [];
@@ -47,39 +46,30 @@ class Manager {
         continue;
       }
 
-      // we check if the directory of the set or the file to transert exists
-      let elementToTransfert = isASet ? hostDir : `${hostDir}/${files[0]}`;
-      let elementExists;
-      try {
-        elementExists = fs.existsSync(elementToTransfert);
-      } catch (e) {
-        if (e.code == 'ENOENT') {
-          elementExists = true;
-        } else {
-          throw new Error('something went wrong');
-        }
+      continue;
+
+      // we create the repo directory
+      mkdirp.sync(repoDirpath);
+
+      // we transfert the files
+      for (const file of files) {
+        const hostFile = fs.createReadStream(path.join(hostDirpath, file));
+        const repoFile = fs.createWriteStream(path.join(repoDirpath, file));
+
+        hostFile.pipe(repoFile).on('finish', (o) => {
+          console.log(o);
+          hostFile.close();
+          repoFile.close();
+        });
       }
-      if (!elementExists) {
-        console.log(`"${hostPath}" NOT FOUND! (passing)`.red);
-        continue;
-      }
 
-      // we create the local directory
-      mkdirp.sync(localDir);
-
-
-      files.forEach(f => {
-        const rstream = fs.createReadStream(path.resolve(hostDir, f));
-        const wstream = fs.createWriteStream(path.resolve(localDir, f));
-        rstream.pipe(wstream);
-
-        ((stream, hostPath) => {
-          stream.on('finish', () => {
-            wstream.end();
-            console.log(`"${hostPath}" fetched~`.green);
-          });
-        })(wstream, hostPath);
-      });
+      /*         ((stream, hostPath) => {
+                stream.on('finish', () => {
+                  wstream.end();
+                  console.log(`"${hostPath}" fetched~`.green);
+                });
+              })(wstream, hostPath);
+    }); */
     }
   }
 

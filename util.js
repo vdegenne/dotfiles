@@ -24,7 +24,9 @@ exports.getPaths = async() => {
           throw new Error('The .paths file is broken.'.red);
         }
         return path[0];
-      });
+      })
+      .map(p => p.replace(/^~/, process.env.HOME));
+
 };
 
 
