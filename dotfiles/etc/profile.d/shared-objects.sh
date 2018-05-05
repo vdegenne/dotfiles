@@ -13,6 +13,7 @@ alias lla='ls -la --color'
 alias grep='grep --color'
 alias emacs='emacs -nw -u vdegenne'
 
+alias mkddir='. mkddir $*'
 alias gitclone='. gitclone $*'
 alias pg-rest-starter='. pg-rest-starter'
 
@@ -43,18 +44,4 @@ spotcdspot () {
 
 nodelog () {
     node -e "console.log($1)"
-}
-
-grab-a-clang () {
-    echo "BasedOnStyle: Google
-AlignAfterOpenBracket: AlwaysBreak
-AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortBlocksOnASingleLine: false
-AllowShortCaseLabelsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: None
-AllowShortIfStatementsOnASingleLine: false
-AllowShortLoopsOnASingleLine: false
-BinPackArguments: false
-BinPackParameters: false
-" > '.clang-format'
 }
