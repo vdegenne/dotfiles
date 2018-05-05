@@ -54,7 +54,7 @@ class Manager {
       // we transfert the files
       for (const file of files) {
         const repoFilepath = path.join(repoDirpath, file);
-        const isCreation = fs.existsSync(repoFilepath);
+        const isCreation = !fs.existsSync(repoFilepath);
 
         const hostFile = fs.createReadStream(path.join(hostDirpath, file));
         const repoFile = fs.createWriteStream(repoFilepath);
