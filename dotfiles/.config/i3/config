@@ -18,7 +18,8 @@ floating_modifier $mod
 
 
 # programs
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+ctrl+e exec emacs
 bindsym $mod+p exec scrot '%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Pictures/'
