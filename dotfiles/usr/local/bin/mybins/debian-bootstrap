@@ -1,6 +1,11 @@
 #!/bin/bash
 
+set -e
+
 apt update -y
+
+apt install -y curl i3 suckless-tools i3blocks
+
 
 # install french locale
 localedef fr_FR -i fr_FR -f UTF-8
