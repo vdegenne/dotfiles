@@ -10,7 +10,7 @@ exec_always feh --bg-fill ~/Pictures/c30-1920.jpg
 
 #font pango:Monaco 14
 font pango:FiraCode 12
-# font pango:Noto Sans Mono 14
+# font pango:Noto Mono Regular 23
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -150,15 +150,15 @@ client.urgent		$urgent-bg-color	$urgent-bg-color	$text-color		#00ff00
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    #status_command i3status
     status_command i3blocks
-#    status_command i3status
-	colors {
-		background #000000
-		separator #757575
-		
-		focused_workspace	$bg-color		$bg-color		$text-color
-		inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
-		urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
-	}
-	position top
+    colors {
+    	   background #111111
+	   separator  #757575
+
+	   focused_workspace	$bg-color		$bg-color		$text-color
+	   inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
+	   urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
+    }
+    position top
 }
