@@ -10,7 +10,7 @@
 
 # X & i3
 ~/[.config/i3/]
-/[etc/i3status.conf]
+/[etc/i3blocks.conf]
 ~/[.Xresources]
 /[etc/X11/xorg.conf.d/00-keyboard.conf]
 
