@@ -9,8 +9,8 @@ exec_always feh --bg-fill ~/Pictures/c30-1920.jpg
 
 
 #font pango:Monaco 14
-font pango:FiraCode 12
-# font pango:Noto Mono Regular 23
+font pango:FiraCode 18
+#font pango:Noto Mono Regular 23
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position

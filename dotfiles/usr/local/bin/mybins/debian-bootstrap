@@ -4,8 +4,26 @@ set -e
 
 apt update -y
 
-apt install -y curl i3 suckless-tools i3blocks
+apt install -y curl i3 suckless-tools
 
 
 # install french locale
 localedef fr_FR -i fr_FR -f UTF-8
+
+
+################################
+#### INSTALL POSTGRESQL 9.5 ####
+################################
+# echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+# curl -s http http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+# apt update -y
+# apt install -y postgresql-9.5
+
+
+# i3blocks
+# apt install -y i3blocks
+git clone git://github.com/vivien/i3blocks
+cd i3blocks
+make clean debug
+make install
+cd .. && rm -rf i3blocks

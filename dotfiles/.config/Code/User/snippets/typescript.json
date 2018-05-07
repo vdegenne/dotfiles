@@ -16,5 +16,21 @@
     "prefix": "lo",
     "body": "console.log('$1')$2",
     "description": "override the default snippet"
+  },
+  "route": {
+    "prefix": "route",
+    "body": [
+      "${1:router}.${2:get}(\"${3:/}\", async (req, res) => {",
+      "  $0",
+      "});",
+    ]
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "test(\"$1\", async () => {",
+      "  $0",
+      "});"
+    ]
   }
 }
