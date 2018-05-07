@@ -4,12 +4,12 @@ set $mod Mod4
 hide_edge_borders both
 # for_window [class="^.*"] border pixel 10
 
-
 exec_always feh --bg-fill ~/Pictures/c30-1920.jpg
 
 
+
 #font pango:Monaco 14
-font pango:FiraCode 18
+font pango:FiraCode 10
 #font pango:Noto Mono Regular 23
 
 
@@ -149,6 +149,8 @@ client.urgent		$urgent-bg-color	$urgent-bg-color	$text-color		#00ff00
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
+
 bar {
     #status_command i3status
     status_command i3blocks
@@ -161,4 +163,22 @@ bar {
 	   urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
     }
     position top
+}
+
+
+bar {
+    #status_command i3status
+    status_command i3blocks -c /usr/local/etc/i3blocks-bottom.conf
+
+    font pango:FiraCode 9
+    colors {
+    	   background #444444
+	   separator  #757575
+
+	   focused_workspace	$bg-color		$bg-color		$text-color
+	   inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
+	   urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
+    }
+    position bottom
+    workspace_buttons no
 }

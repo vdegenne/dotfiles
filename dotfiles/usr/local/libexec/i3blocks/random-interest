@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const interests = [
+  { name: 'peignoire', for : 'sortir de la douche rapidement' },
+  { name: 'sneakers', for : 'pour faire du sport et renforcer la respiration' },
+  { name: 'assurance voiture', for : 'voyager rapidement' }, {name: 'travail'},
+  { name: 'gants', for : 'ne pas ronger les ongles' }
+
+];
+
+const i = interests[Math.floor(Math.random() * interests.length)];
+
+if (i.for) {
+  console.log(`${i.name} pour ${i.for}`);
+} else {
+  console.log(`${i.name}`);
+}

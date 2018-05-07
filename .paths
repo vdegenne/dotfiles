@@ -8,9 +8,13 @@
 /[etc/profile.d/shared-objects.sh]
 /[etc/profile.d/ps1-module.sh]
 
-# X & i3
+# i3/i3blocks
 ~/[.config/i3/]
 /[usr/local/etc/i3blocks.conf]
+/[usr/local/etc/i3blocks-bottom.conf]
+/[usr/local/libexec/i3blocks/random-interest]
+
+# X
 ~/[.Xresources]
 /[etc/X11/xorg.conf.d/00-keyboard.conf]
 
