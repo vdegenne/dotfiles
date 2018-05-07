@@ -13,6 +13,7 @@
 /[usr/local/etc/i3blocks.conf]
 /[usr/local/etc/i3blocks-bottom.conf]
 /[usr/local/libexec/i3blocks/random-interest]
+/[usr/local/libexec/i3blocks/random-hangeul]
 
 # X
 ~/[.Xresources]

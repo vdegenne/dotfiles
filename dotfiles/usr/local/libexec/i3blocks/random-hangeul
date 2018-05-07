@@ -1,0 +1,48 @@
+#!/usr/bin/node
+
+const http = require('http');
+const fs = require('fs');
+
+
+
+const hangeulSolutionFilepath = `${process.env.HOME}/.hangeul.solution`;
+
+if (fs.existsSync(hangeulSolutionFilepath)) {
+
+  const answer = fs.readFileSync(hangeulSolutionFilepath).toString();
+
+  fs.unlinkSync(hangeulSolutionFilepath);
+  
+  console.info(answer);
+  console.info(answer);
+  console.info('#00FF00');
+  process.exit(0);
+}  
+
+
+http.get('http://node-knowledges.vdegenne.com/knowledges/random-hangeul', (res) => {
+
+  let jsonRaw = '';
+  
+  if (res.statusCode !== 200) {
+    console.error('no response');
+    process.exit(1);
+  }
+
+  res
+    .on('data', (buffer) => jsonRaw += buffer.toString())
+    .on('end', () => {
+      let json;
+      try {
+	json = JSON.parse(jsonRaw);
+      } catch (e) {
+	console.error('error with the json');
+	process.exit(1);
+      }
+      fs.writeFileSync(hangeulSolutionFilepath, json.translation);
+      console.log(json.knowledge);
+      console.log('#FFF600');
+      console.log();
+      process.exit(0);
+    });
+});
