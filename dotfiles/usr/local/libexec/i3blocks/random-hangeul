@@ -39,7 +39,7 @@ http.get('http://node-knowledges.vdegenne.com/knowledges/random-hangeul', (res) 
 	console.error('error with the json');
 	process.exit(1);
       }
-      fs.writeFileSync(hangeulSolutionFilepath, json.translation);
+      fs.writeFileSync(hangeulSolutionFilepath, `${json.knowledge} => ${json.translation}`);
       console.log(json.knowledge);
       console.log('#FFF600');
       console.log();
