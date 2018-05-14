@@ -1,6 +1,6 @@
 {
   //"workbench.startupEditor": "newUntitledFile",
-  "clang-format.executable": "/usr/bin/clang-format-3.9",
+  "clang-format.executable": "${workspaceRoot}/node_modules/.bin/clang-format",
   "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "off",
@@ -30,7 +30,6 @@
   "scm.diffDecorations": "none",
   /*     "editor.glyphMargin": false, */
   "editor.folding": true,
-  "workbench.colorTheme": "Default Light+",
   "editor.suggestOnTriggerCharacters": false,
   "editor.quickSuggestions": {
     "other": true,
@@ -42,5 +41,6 @@
   "workbench.iconTheme": "easy-icons",
   "window.title": "${rootName}",
   "workbench.statusBar.visible": true,
-  "workbench.editor.showTabs": true
+  "workbench.editor.showTabs": true,
+  "workbench.colorTheme": "Perfect Dark"
 }
