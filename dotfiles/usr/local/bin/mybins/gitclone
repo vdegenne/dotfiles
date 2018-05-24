@@ -3,13 +3,17 @@
 set -e
 
 if [ -z $ghub ]; then
-    echo 'try to export $ghub first' >&2
+    printf '\e[31mtry to export $ghub first\e[0m\n' >&2
     exit 1
-elif [ -z $1 ]; then
-    echo 'needs one argument (the repo)' >&2
+fi
+
+if [ -z $1 ]; then
+    printf '\e[31mneeds one argument (the repo)\e[0m\n' >&2
     exit 1
 fi
 
 
 git clone "$ghub/$1"
 cd ${1##*/}
+
+
