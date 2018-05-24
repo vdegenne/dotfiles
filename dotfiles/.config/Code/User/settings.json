@@ -32,15 +32,15 @@
   "editor.folding": true,
   "editor.suggestOnTriggerCharacters": false,
   "editor.quickSuggestions": {
-    "other": true,
+    "other": false,
     "comments": false,
     "strings": true
   },
   "editor.parameterHints": false,
   "editor.wordWrap": "on",
-  "workbench.iconTheme": "easy-icons",
   "window.title": "${rootName}",
   "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": true,
-  "workbench.colorTheme": "Perfect Dark"
+  "workbench.colorTheme": "Default Light+",
+  "workbench.iconTheme": "easy-icons"
 }

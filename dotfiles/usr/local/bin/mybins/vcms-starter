@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+read -p "Application-Name (vcms-starter): " appname
+
+[ -z "$appname" ] && appname='vcms-starter';
+
+github-fetch-starter -n "$appname" vcms-starter
+
+cd "$appname"
+yarn vcms:install
+code .
