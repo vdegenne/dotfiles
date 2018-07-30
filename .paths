@@ -21,6 +21,7 @@
 
 # fonts
 /[usr/share/fonts/Monaco.ttf]
+/[usr/share/fonts/FiraCode-Regular.ttf]
 
 # Editors
 ~/[.emacs]
