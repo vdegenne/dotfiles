@@ -10,6 +10,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 GroupAdd, Group1, ahk_exe Emacs.exe
 GroupAdd, Group1, ahk_exe netbeans.exe
+GroupAdd, Group1, ahk_exe phpstorm64.exe
+GroupAdd, Group1, ahk_exe sublime_text.exe
+GroupAdd, Group1, ahk_exe atom.exe
+GroupAdd, Group1, ahk_exe Illustrator.exe
+GroupAdd, Group1, ahk_exe Code.exe
+GroupAdd, Group1, ahk_exe cmd.exe
+GroupAdd, Group1, ahk_exe idea64.exe
+GroupAdd, Group1, ahk_exe webstorm64.exe
 return
 	
 #IfWinNotActive, ahk_group Group1
@@ -21,15 +29,16 @@ return
 ^p::Send, {LControl Up}{Up}{LControl Down}
 ^f::Send, {LControl Up}{Right}{LControl Down}
 ^b::Send, {LControl Up}{Left}{LControl Down}
-^a::Send, {LControl Up}{Home}{LControl Down}
+;^a::Send, {LControl Up}{Home}{LControl Down}
 ^e::Send, {LControl Up}{End}{LControl Down}
+LAlt & Backspace::Send, ^{Backspace}
 ; !+<::Send, {LAlt Up}{Shift Up}{Home}{Shift Down}{LAlt Down}
 ; !+>::Send, {LAlt Up}{Shift Up}{End}{Shift Down}{LAlt Down}
 
 
 ; COPY & PASTE
 ^y::^v
-^k::Send {LControl Up}+{end}^c{del}{LControl Down}
+^k::Send {LControl Up}+{end}^x{LControl Down}
 
 
 ; FOR KOREAN KEYBOARD, SWITCH TO KOREAN
@@ -40,8 +49,10 @@ return
 
 ; FOR CHROME
 #IfWinActive, ahk_exe chrome.exe
-; REPLACING SEARCH
-^s::^f
 ; CANCEL URL BAR
 ^g::Send, {LControl Up}{Esc}+{Tab}{LControl Down}
 
+
+#IfWinActive, ahk_exe atom.exe
+^n::Send, {LControl Up}{Down}{LControl Down}
+^p::Send, {LControl Up}{Up}{LControl Down}
