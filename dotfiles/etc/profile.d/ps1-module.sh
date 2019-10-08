@@ -30,7 +30,7 @@
 # * All possible colors can be checked using this function :
 show255colors() {
     for C in {16..255}; do
-	echo -en "\e[48;5;${C}m$C ";
+    echo -en "\e[48;5;${C}m$C ";
     done
     echo -en "\e[0m";
 }
@@ -118,4 +118,4 @@ fi
 # without user
 # PS1="\n\[\e[0;38;5;49;48;5;232m\]\$(minimizePwd \$(pwd) 3)\[\e[0;38;5;240m\]\$(showBranch) \[\e[0;38;5;221m\]\n$prompt>\[\e[0m\] "
 #PS1="\[\e[1;34m\]\w\[\e[38;5;227m\]\$(showBranchNude) \[\e[32m\]\$prompt\[\e[0m\] "
-PS1="\[\e[37m\]\h:\[\e[34m\]\$(minimizePwd \$(pwd) 3)\[\e[93m\]\$(showBranchNude)\[\e[36m\] \$prompt\[\e[0m\] "
+PS1="\[\e[34m\]\$(minimizePwd \$(pwd) 3)\[\e[93m\]\$(showBranchNude)\[\e[36m\] \$prompt\[\e[0m\] "
