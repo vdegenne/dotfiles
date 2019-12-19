@@ -12,12 +12,23 @@
 	// 	],
 	// 	"description": "Log output to console"
   // }
-  "Roboto Link Element": {
-    "prefix": "roboto",
-    "body": "<link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500\" rel=\"stylesheet\">"
-  },
   "Mobile Viewport": {
     "prefix": "viewport",
     "body": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+  },
+  "Roboto Font": {
+    "prefix": "roboto",
+    "body": "<link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500\" rel=\"stylesheet\">"
+  },
+  "Material Font": {
+    "prefix": "material-icons",
+    "body": "<link href=\"https://fonts.googleapis.com/css?family=Material+Icons&display=block\" rel=\"stylesheet\">"
+  },
+  "Favicon Tags": {
+    "prefix": "favicon",
+    "body": [
+      "<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">",
+      "<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">"
+    ]
   }
 }
