@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+while true
+do
+    if [[ "$(xdotool getwindowfocus getwindowname)" =~ "Chrome" ]]
+    then
+	xbindkeys 2>/dev/null
+    else
+	killall xbindkeys 2>/dev/null
+    fi
+    sleep 0.5
+done

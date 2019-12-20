@@ -1,0 +1,13 @@
+[Unit]
+Description=PM2
+After=network.target
+
+[Service]
+Type=forking
+Environment=PM2_HOME=/home/vdegenne/.pm2
+
+ExecStart=/etc/nginx/pm2.start.sh /home/vdegenne/gits
+
+
+[Install]
+WantedBy=default.target
