@@ -40,7 +40,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -97,7 +97,7 @@ font:
     style: "Medium Italic"
 
   # Point size of the font
-  size: 18.0
+  size: 14.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
