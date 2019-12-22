@@ -20,7 +20,7 @@ To run all the pm2 services on boot :
 
 ## option 2: systemd
 
-- transfer `/usr/local/bin/chrome-emacs` and `~/.config/systemd/user/chrome-emacs.service`
+- transfer `/usr/local/bin/chrome-emacs`, `~/.xbindkeysrc` and `~/.config/systemd/user/chrome-emacs.service`
 - make sure `chrome-emacs` is executable
 - enable it `systemctl --user enable chrome-emacs` for boots
 - start it for the current session `systemctl --user start chrome-emacs`
