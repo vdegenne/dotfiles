@@ -11,6 +11,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
+  # TERM: xterm-256color
   TERM: xterm-256color
 
 window:
@@ -40,7 +41,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -51,7 +52,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  startup_mode: Maximized
 
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
@@ -249,7 +250,7 @@ visual_bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.9
+background_opacity: 1
 
 # Key bindings
 #
@@ -349,7 +350,7 @@ key_bindings:
   - { key: C,        mods: Command,       action: Copy                         }
   - { key: Q,        mods: Command,       action: Quit                         }
   - { key: N,        mods: Command,       action: SpawnNewInstance             }
-  - { key: Return,   mods: Command,       action: ToggleFullscreen             }
+  - { key: F11,       action: ToggleFullscreen             }
 
   - { key: Home,                          chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                          chars: "\x1b[H",   mode: ~AppCursor  }
@@ -395,7 +396,7 @@ key_bindings:
   - { key: F8,                            chars: "\x1b[19~"                    }
   - { key: F9,                            chars: "\x1b[20~"                    }
   - { key: F10,                           chars: "\x1b[21~"                    }
-  - { key: F11,                           chars: "\x1b[23~"                    }
+#  - { key: F11,                           chars: "\x1b[23~"                    }
   - { key: F12,                           chars: "\x1b[24~"                    }
   - { key: Back,                          chars: "\x7f"                        }
   - { key: Back,     mods: Alt,           chars: "\x1b\x7f"                    }
