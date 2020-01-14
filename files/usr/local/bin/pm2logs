@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 pm_id=$(node <<EOF
 const pm2_processes = `pm2 jlist`;
