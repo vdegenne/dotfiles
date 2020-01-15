@@ -2,10 +2,10 @@
 
 pm_id=$(node <<EOF
 const pm2_processes = `pm2 jlist`;
-const pm2_process = pm2_processes.filter(proc => proc.pm2_env.pm_exec_path === "`pwd`");
+const pm2_process = pm2_processes.filter(proc => proc.pm2_env.pm_cwd === "`pwd`");
 if (pm2_process.length) {
   // one process found
-  console.log(pm2_process[0].pm_id)
+  console.log(pm2_process[0].pm_id);
   process.exit(0);
 }
 // else // not found
