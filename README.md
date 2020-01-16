@@ -31,3 +31,11 @@ To run all the pm2 services on boot :
 - in `keyboard` menu check `emacs shortcuts`
 
 *note: not recommended because no copy/paste support*
+
+# Color Emojis in Fedora
+
+- Install the font
+```bash
+dnf install google-noto-emoji-color-fonts
+```
+- Transfer `~/.config/fontconfig/color-emoji.conf`
