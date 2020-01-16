@@ -38,4 +38,4 @@ To run all the pm2 services on boot :
 ```bash
 dnf install google-noto-emoji-color-fonts
 ```
-- Transfer `~/.config/fontconfig/color-emoji.conf`
+- Transfer `/etc/fonts/local.conf`
