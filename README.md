@@ -32,10 +32,15 @@ To run all the pm2 services on boot :
 
 *note: not recommended because no copy/paste support*
 
-# Color Emojis in Fedora
+# Color Emojis (fedora)
 
 - Install the font
 ```bash
 dnf install google-noto-emoji-color-fonts
 ```
 - Transfer `/etc/fonts/local.conf`
+
+# Rebind Caps Lock (fedora)
+
+- install `gnome-tweaks-3` and open it
+- go in `Keyboard & Mouse > Keyboard > Addtional Layout Options > Caps Lock behavior`
