@@ -44,3 +44,9 @@ dnf install google-noto-emoji-color-fonts
 
 - install `gnome-tweaks-3` and open it
 - go in `Keyboard & Mouse > Keyboard > Addtional Layout Options > Caps Lock behavior`
+
+# Prevent Ctrl+S from freezing the terminal
+
+`stty -ixon` or `stty stop undef`
+
+[source](https://superuser.com/a/251455/686498)
