@@ -32,6 +32,11 @@ To run all the pm2 services on boot :
 
 *note: not recommended because no copy/paste support*
 
+# Configure Emacs for Vim
+
+- Install [Vimacs](https://www.vim.org/scripts/script.php?script_id=300).
+
+
 # Color Emojis (fedora)
 
 - Install the font
