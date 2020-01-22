@@ -1,14 +1,10 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-  {
-    "key": "ctrl+x n",
-    "command": "workbench.action.navigateBack",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-workbench.action.toggleSidebarVisibility"
-  },
+  // {
+  //   "key": "ctrl+x n",
+  //   "command": "workbench.action.navigateBack",
+  //   "when": "editorTextFocus"
+  // },
   {
     "key": "alt+/",
     "command": "editor.action.triggerSuggest",
@@ -24,6 +20,10 @@
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
     "key": "alt+left",
     "command": "workbench.action.navigateBack",
     "when": "editorTextFocus"
@@ -32,5 +32,54 @@
     "key": "alt+right",
     "command": "workbench.action.navigateForward",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+x alt+o",
+    "command": "outline.focus"
+  },
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  // {
+  //   "key": "shift+alt+1",
+  //   "command": "workbench.action.terminal.toggleTerminal"
+  // },
+  // {
+  //   "key": "ctrl+`",
+  //   "command": "-workbench.action.terminal.toggleTerminal"
+  // },
+  {
+    "key": "alt+1",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "alt+shift+1",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+shift+1",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+x 0",
+    "command": "workbench.action.closePanel",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+x 0",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
   }
 ]
