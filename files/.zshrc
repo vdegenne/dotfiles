@@ -9,7 +9,11 @@ export ZSH="/home/vdegenne/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="half-life"
+# ZSH_THEME="half-life"
+# ZSH_THEME="dstufft"
+# ZSH_THEME="kardan"
+ZSH_THEME="sammy"
+# ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -43,7 +47,7 @@ ZSH_THEME="half-life"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -69,7 +73,8 @@ ZSH_THEME="half-life"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
+# autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,4 +104,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# setopt correct
+stty -ixon
+export EDITOR="emacsclient"
+
+alias sudo='sudo '
+alias emacs="TERM=screen-256color emacsclient -c -nw"
+
+# use `sudo -e <filepath>` to edit in the same local server.
+export SUDO_EDITOR="emacsclient -nw"
+
