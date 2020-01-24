@@ -17,7 +17,11 @@
   // }
   "Print to console": {
     "scope": "javascript,typescript",
-    "prefix": "log",
-    "body": "console.log('$1')$2"
+    "prefix": "con",
+    "body": "console.log($1);$2"
+  },
+  "Wrapper Snippet": {
+    "prefix": "_w",
+    "body": "${1:console.log}($TM_SELECTED_TEXT)"
   }
 }
