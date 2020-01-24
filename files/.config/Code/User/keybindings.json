@@ -17,7 +17,8 @@
   },
   {
     "key": "alt+1",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+b",
@@ -26,12 +27,26 @@
   {
     "key": "alt+left",
     "command": "workbench.action.navigateBack",
-    "when": "editorTextFocus"
+    "when": "editorFocus"
   },
   {
     "key": "alt+right",
     "command": "workbench.action.navigateForward",
-    "when": "editorTextFocus"
+    "when": "editorFocus"
+  },
+  /*   {
+    "key": "alt+1",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "!filesExporerFocus"
+  },
+  {
+    "key": "alt+1",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus"
+  }, */
+  {
+    "key": "alt+1",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "alt+x alt+o",
@@ -45,32 +60,27 @@
     "key": "alt+p",
     "command": "workbench.action.terminal.focusPrevious"
   },
-  // {
-  //   "key": "shift+alt+1",
-  //   "command": "workbench.action.terminal.toggleTerminal"
-  // },
-  // {
-  //   "key": "ctrl+`",
-  //   "command": "-workbench.action.terminal.toggleTerminal"
-  // },
-  {
-    "key": "alt+1",
-    "command": "workbench.view.explorer",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+e",
-    "command": "-workbench.view.explorer"
-  },
   {
     "key": "alt+shift+1",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
   {
-    "key": "alt+shift+1",
+    "key": "ctrl+`",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer"
   },
   {
     "key": "ctrl+x 0",
@@ -81,5 +91,10 @@
     "key": "ctrl+x 0",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
   }
 ]
