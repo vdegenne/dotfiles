@@ -25,7 +25,7 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "alt+left",
+    "key": "ctrl+u ctrl+space",
     "command": "workbench.action.navigateBack",
     "when": "editorFocus"
   },
@@ -60,10 +60,10 @@
     "key": "alt+p",
     "command": "workbench.action.terminal.focusPrevious"
   },
-  {
-    "key": "alt+shift+1",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
+  // {
+  //   "key": "alt+shift+1",
+  //   "command": "workbench.action.terminal.toggleTerminal"
+  // },
   {
     "key": "ctrl+`",
     "command": "workbench.action.focusActiveEditorGroup",
@@ -96,5 +96,53 @@
     "key": "ctrl+alt+n",
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
+  },
+  {
+    "key": "alt+v",
+    "command": "bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+[",
+    "command": "editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "-editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+]",
+    "command": "editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "-editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+shift+6",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "name": "Wrapper Snippet"
+    }
   }
 ]
