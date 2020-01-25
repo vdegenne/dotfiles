@@ -113,3 +113,10 @@ alias emacs="TERM=screen-256color emacsclient -c -nw"
 # use `sudo -e <filepath>` to edit in the same local server.
 export SUDO_EDITOR="emacsclient -nw"
 
+# ?
+# zstyle '*' single-ignored complete
+
+set -o menucomplete
+
+bindkey -M emacs '^w' kill-region
+bindkey -M emacs '^[^M' autosuggest-execute
