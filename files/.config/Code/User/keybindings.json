@@ -30,7 +30,7 @@
     "when": "editorFocus"
   },
   {
-    "key": "alt+right",
+    "key": "ctrl+u ctrl+i",
     "command": "workbench.action.navigateForward",
     "when": "editorFocus"
   },
@@ -144,5 +144,9 @@
     "args": {
       "name": "Wrapper Snippet"
     }
+  },
+  {
+    "key": "ctrl+i",
+    "command": "editor.action.reindentselectedlines"
   }
 ]
