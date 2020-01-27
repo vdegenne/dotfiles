@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Synergy
+Type=Application
+Exec=synergy
+Terminal=false
