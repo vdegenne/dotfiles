@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: polymer-property-definition
-# key: polyprop
-# --
-${1:propName}: {
-  type: ${2:Object},
-  ${3:value: ${4:default}},
-  ${5:readOnly: ${6:true}}
-},

@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: htmlcom
-# key: htmlcom
-# --
-<!-- ${1:comment} -->$0

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: foreign key
-# key: foreignkey
-# --
-foreign key (${1:column})
-  references ${2:referenced_table} (${3:referenced_column})
-    on update ${4:cascade} on delete ${5:cascade}

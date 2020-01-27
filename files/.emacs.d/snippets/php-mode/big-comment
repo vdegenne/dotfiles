@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: big-comment
-# key: bigcom
-# --
-/****************
- * ${1:insert comment}
- *
- ************************************/
- $0

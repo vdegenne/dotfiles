@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: dispatchEvent
-# key: evtdspatch
-# --
-this.dispatchEvent(
-  new CustomEvent('${1:eventName}',
-                  { detail : { $0 },
-                    bubbles: true, composed: true }));
