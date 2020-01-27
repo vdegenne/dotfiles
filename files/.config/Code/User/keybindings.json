@@ -25,7 +25,7 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+u ctrl+space",
+    "key": "ctrl+u ctrl+y",
     "command": "workbench.action.navigateBack",
     "when": "editorFocus"
   },
