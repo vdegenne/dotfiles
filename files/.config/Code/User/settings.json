@@ -9,7 +9,7 @@
   "editor.suggestSelection": "first",
   "extensions.ignoreRecommendations": true,
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.visible": true,
@@ -34,11 +34,27 @@
   "window.title": "${rootName}",
   "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": true,
-  "workbench.colorTheme": "Sea Green Theme",
+  "workbench.colorTheme": "Deep Blue",
   "breadcrumbs.enabled": true,
   "clang-format.executable": "${workspaceRoot}/node_modules/.bin/clang-format",
   "blockhighlight.accentCurrentLine": false,
   "terminal.external.linuxExec": "gnome-terminal",
   "editor.smoothScrolling": true,
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "html.format.enable": false,
+  "zenMode.centerLayout": false,
+  "workbench.iconTheme": "vscode-icons",
+  "highlight.regexes": {
+    "(public|protected|private)": {
+      "color": "black",
+      "backgroundColor": "white",
+      "fontWeight": "none"
+    },
+    "(async|static)": {
+      "color": "grey"
+    },
+    "(public|protected|private)( async | static )?([^:;!?(=]*)": [{}, {
+      
+    }, {"backgroundColor": "grey", "color": "white", "fontWeight": "100"}]
+  }
 }
