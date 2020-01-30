@@ -31,7 +31,9 @@ There are two things you can do about this warning:
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes nil)
- '(package-selected-packages (quote (evil tide xterm-color typescript-mode web-mode))))
+ '(package-selected-packages
+   (quote
+    (ivy evil tide xterm-color typescript-mode web-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,3 +56,15 @@ There are two things you can do about this warning:
 
 (setq create-lockfiles nil)
 (save-place-mode 1)
+
+(ido-mode 1)
+
+
+
+;; This will save buffer automatically when you switch it
+(defadvice switch-to-buffer (before save-buffer-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice other-window (before other-window-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice other-frame (before other-frame-now activate)
+  (when buffer-file-name (save-buffer)))
