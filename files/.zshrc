@@ -120,4 +120,4 @@ export SUDO_EDITOR="emacsclient -nw"
 set -o menucomplete
 
 bindkey -M emacs '^w' kill-region
-bindkey -M emacs '^[k' autosuggest-execute
+bindkey -M emacs '^[o' autosuggest-execute

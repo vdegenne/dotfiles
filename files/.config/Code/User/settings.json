@@ -2,18 +2,18 @@
   "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "off",
-  "editor.renderWhitespace": "all",
   "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.toggleSidebarVisibility",
     "emacs.shellCommand"
   ],
-  "editor.suggestSelection": "first",
-  "extensions.ignoreRecommendations": true,
+  "editor.suggestSelection": "recentlyUsed",
+  "extensions.ignoreRecommendations": false,
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": -1,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.visible": true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "explorer.autoReveal": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -24,37 +24,96 @@
   "editor.tabSize": 2,
   "scm.diffDecorations": "none",
   "editor.folding": true,
-  "editor.suggestOnTriggerCharacters": false,
+  "editor.suggestOnTriggerCharacters": true,
   "editor.quickSuggestions": {
     "other": true,
-    "comments": false,
+    "comments": true,
     "strings": true
   },
   "editor.wordWrap": "off",
   "window.title": "${rootName}",
   "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": true,
-  "workbench.colorTheme": "Deep Blue",
+  "workbench.colorTheme": "Community Material Theme High Contrast",
   "breadcrumbs.enabled": true,
   "clang-format.executable": "${workspaceRoot}/node_modules/.bin/clang-format",
   "blockhighlight.accentCurrentLine": false,
+  "blockhighlight.background": [
+    "200",
+    "100",
+    "255",
+    ".09"
+  ],
   "terminal.external.linuxExec": "gnome-terminal",
   "editor.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "html.format.enable": false,
   "zenMode.centerLayout": false,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "highlight.regexes": {
     "(public|protected|private)": {
       "color": "black",
       "backgroundColor": "white",
       "fontWeight": "none"
     },
+    "(function)": {
+      "backgroundColor": "grey",
+      "color": "white"
+    },
+    "(\\([^(]+\\) => )": {
+      "backgroundColor": "grey",
+      "color": "white"
+    },
     "(async|static)": {
       "color": "grey"
     },
-    "(public|protected|private)( async | static )?([^:;!?(=]*)": [{}, {
-      
-    }, {"backgroundColor": "grey", "color": "white", "fontWeight": "100"}]
-  }
+    "(public|protected|private)( async | static )?([^:;'!?(=]*)": [
+      {},
+      {},
+      {
+        "backgroundColor": "grey",
+        "color": "white",
+        "fontWeight": "100"
+      }
+    ],
+    "(TODO)": {
+      "backgroundColor": "red",
+      "color": "white"
+    }
+  },
+  "editor.cursorSurroundingLines": 14,
+  "editor.cursorWidth": 2,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "block",
+  "workbench.colorCustomizations": {
+    "editorSuggestWidget.selectedBackground": "#ffffff40",
+    // "editorCursor.background": "#000000",
+    "editorCursor.foreground": "#00ff00",
+    "editor.lineHighlightBackground": "#00ff0020",
+    //   "activityBarBadge.background": "#5C6BC0",
+    //   "activityBar.activeBorder": "#5C6BC0",
+    //   "list.activeSelectionForeground": "#5C6BC0",
+    //   "list.inactiveSelectionForeground": "#5C6BC0",
+    //   "list.highlightForeground": "#5C6BC0",
+    //   "scrollbarSlider.activeBackground": "#5C6BC050",
+    //   "editorSuggestWidget.highlightForeground": "#5C6BC0",
+    //   "textLink.foreground": "#5C6BC0",
+    //   "progressBar.background": "#5C6BC0",
+    //   "pickerGroup.foreground": "#5C6BC0",
+    //   "tab.activeBorder": "#5C6BC0",
+    //   "notificationLink.foreground": "#5C6BC0",
+    //   "editorWidget.resizeBorder": "#5C6BC0",
+    //   "editorWidget.border": "#5C6BC0",
+    //   "settings.modifiedItemIndicator": "#5C6BC0",
+    //   "settings.headerForeground": "#5C6BC0",
+    //   "panelTitle.activeBorder": "#5C6BC0",
+    //   "breadcrumb.activeSelectionForeground": "#5C6BC0",
+    //   "menu.selectionForeground": "#5C6BC0",
+    //   "menubar.selectionForeground": "#5C6BC0",
+    //   "editor.findMatchBorder": "#5C6BC0",
+    //   "selection.background": "#5C6BC040"
+    // },
+  },
+  "terminal.integrated.rendererType": "dom",
+  "editor.autoClosingBrackets": "never"
 }
