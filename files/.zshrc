@@ -13,7 +13,8 @@ export ZSH="/home/vdegenne/.oh-my-zsh"
 # ZSH_THEME="dstufft"
 # ZSH_THEME="kardan"
 # ZSH_THEME="sammy"
-ZSH_THEME="takashiyoshida"
+# ZSH_THEME="takashiyoshida"
+ZSH_THEME="tjkirch"
 # ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
@@ -74,7 +75,7 @@ ZSH_THEME="takashiyoshida"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 # autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -108,8 +109,12 @@ source $ZSH/oh-my-zsh.sh
 stty -ixon
 export EDITOR="emacsclient"
 
+## ALIAS
 alias sudo='sudo '
 alias emacs="TERM=screen-256color emacsclient -c -nw"
+
+alias cd="TAGGED_PATH=\"$(pwd)\"; cd"
+alias there="([ -z \"$TAGGED_PATH\" ] && echo \"no tagged path to travel to\") || cd $TAGGED_PATH"
 
 # use `sudo -e <filepath>` to edit in the same local server.
 export SUDO_EDITOR="emacsclient -nw"
@@ -120,4 +125,4 @@ export SUDO_EDITOR="emacsclient -nw"
 set -o menucomplete
 
 bindkey -M emacs '^w' kill-region
-bindkey -M emacs '^[o' autosuggest-execute
+bindkey -M emacs '^[j' autosuggest-execute

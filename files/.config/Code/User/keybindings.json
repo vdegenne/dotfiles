@@ -108,7 +108,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+[",
+    "key": "ctrl+alt+[",
     "command": "editor.fold",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -118,7 +118,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+shift+]",
+    "key": "ctrl+alt+]",
     "command": "editor.unfold",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -144,7 +144,7 @@
     "command": "-workbench.action.files.newUntitledFile"
   },
   {
-    "key": "ctrl+u d",
+    "key": "alt+.",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
@@ -172,5 +172,19 @@
     "key": "ctrl+alt+-",
     "command": "-workbench.action.quickInputBack",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "shift+alt+1",
+    "command": "-emacs.shellCommand"
+  },
+  {
+    "key": "ctrl+numpad2",
+    "command": "editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+2",
+    "command": "-editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]

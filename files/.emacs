@@ -33,7 +33,10 @@ There are two things you can do about this warning:
  '(custom-enabled-themes nil)
  '(package-selected-packages
    (quote
-    (ivy evil tide xterm-color typescript-mode web-mode))))
+    (ivy evil tide xterm-color typescript-mode web-mode)))
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-enable-auto-indentation t)
+ '(web-mode-markup-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -57,8 +60,8 @@ There are two things you can do about this warning:
 (setq create-lockfiles nil)
 (save-place-mode 1)
 
-(ido-mode 1)
-
+;; (ido-mode 1)
+(ivy-mode 1)
 
 
 ;; This will save buffer automatically when you switch it
