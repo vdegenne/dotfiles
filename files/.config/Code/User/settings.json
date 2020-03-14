@@ -1,15 +1,15 @@
 {
   "editor.fontFamily": "Fira Code Retina,  Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "terminal.integrated.commandsToSkipShell": [
-    "workbench.action.toggleSidebarVisibility",
-    "emacs.shellCommand"
+    "-workbench.action.terminal.focusFindWidget",
+    "-workbench.action.quickOpen"
   ],
   "editor.suggestSelection": "recentlyUsed",
   "extensions.ignoreRecommendations": false,
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.visible": true,
@@ -112,10 +112,14 @@
     // "editor.findMatchBorder": "#AB47BC",
     // "selection.background": "#AB47BC40",
     // list selected items
-    "editorSuggestWidget.selectedBackground": "#ffffff40",
-    "list.focusBackground": "#ffffff40"
+    // "editorSuggestWidget.selectedBackground": "#ffffff40",
+    // "list.focusBackground": "#ffffff40"
+    "editor.selectionBackground": "#1a5724"
   },
   "terminal.integrated.rendererType": "dom",
   "editor.autoClosingBrackets": "never",
-  "materialTheme.accent": "Purple"
+  "materialTheme.accent": "Purple",
+  "workbench.colorTheme": "Pitch Black",
+  "terminal.integrated.allowChords": false,
+  "vim.foldfix": true
 }
