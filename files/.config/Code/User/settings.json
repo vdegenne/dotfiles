@@ -9,14 +9,14 @@
   "editor.suggestSelection": "recentlyUsed",
   "extensions.ignoreRecommendations": false,
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.visible": true,
-  "editor.minimap.enabled": false,
-  "explorer.autoReveal": false,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "editor.minimap.enabled": true,
+  "explorer.autoReveal": true,
+  // "editor.formatOnPaste": true,
+  // "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "files.autoSave": "onFocusChange",
   "workbench.startupEditor": "newUntitledFile",
@@ -112,8 +112,8 @@
     // "editor.findMatchBorder": "#AB47BC",
     // "selection.background": "#AB47BC40",
     // list selected items
-    // "editorSuggestWidget.selectedBackground": "#ffffff40",
-    // "list.focusBackground": "#ffffff40"
+    "editorSuggestWidget.selectedBackground": "#ffffff40",
+    "list.focusBackground": "#ffffff40",
     "editor.selectionBackground": "#1a5724"
   },
   "terminal.integrated.rendererType": "dom",
@@ -121,5 +121,6 @@
   "materialTheme.accent": "Purple",
   "workbench.colorTheme": "Pitch Black",
   "terminal.integrated.allowChords": false,
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "editor.renderWhitespace": "none"
 }
