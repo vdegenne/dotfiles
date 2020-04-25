@@ -122,5 +122,5 @@
   "workbench.colorTheme": "Pitch Black",
   "terminal.integrated.allowChords": false,
   "vim.foldfix": true,
-  "editor.renderWhitespace": "none"
+  "editor.renderWhitespace": "all"
 }

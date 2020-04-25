@@ -6,3 +6,4 @@ set tabstop=2
 set expandtab
 
 set autoindent
+set noswapfile

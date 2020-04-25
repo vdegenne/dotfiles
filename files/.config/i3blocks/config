@@ -30,6 +30,11 @@ command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+# [cryptos]
+# command=./cryptos/main.js
+# PAIR=xbteur
+# interval=20
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
@@ -49,7 +54,7 @@ signal=10
 [memory]
 label=MEM
 separator=false
-interval=30
+interval=4
 
 [memory]
 label=SWAP
