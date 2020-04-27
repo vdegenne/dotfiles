@@ -16,7 +16,7 @@
   "editor.minimap.enabled": true,
   "explorer.autoReveal": true,
   // "editor.formatOnPaste": true,
-  // "editor.formatOnSave": true,
+  "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "files.autoSave": "onFocusChange",
   "workbench.startupEditor": "newUntitledFile",
@@ -33,7 +33,7 @@
   "editor.wordWrap": "off",
   "window.title": "${rootName}",
   "workbench.statusBar.visible": true,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
   "breadcrumbs.enabled": true,
   "clang-format.executable": "${workspaceRoot}/node_modules/.bin/clang-format",
   "blockhighlight.accentCurrentLine": false,
@@ -122,5 +122,8 @@
   "workbench.colorTheme": "Pitch Black",
   "terminal.integrated.allowChords": false,
   "vim.foldfix": true,
-  "editor.renderWhitespace": "all"
+  "editor.renderWhitespace": "all",
+  "[javascript]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
 }
