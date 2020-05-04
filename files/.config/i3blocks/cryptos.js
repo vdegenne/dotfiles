@@ -12,7 +12,7 @@ async function main() {
   const cryptoname = pair.split('/')[0]
   const lastValues = JSON.parse(await fetch(`http://localhost:36005/${pair}?lasts=2`))
   const currentValue = parseFloat(lastValues.pop())
-  let changeValue = await fetch(`http://localhost:36005/${pair}?last=5m`)
+  let changeValue = await fetch(`http://localhost:36005/${pair}?last=1h`)
   let changeColor = 'grey';
 
   if (changeValue) {
