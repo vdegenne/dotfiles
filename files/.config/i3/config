@@ -223,5 +223,7 @@ exec --no-startup-id xset r rate 200 25
 exec --no-startup-id xsetroot -solid "#555555"
 exec bash -c "~/.screenlayout/desktop\\ one\\ screen.sh"
 # exec synergy
-# exec autokey-qt
 # exec ibus-daemon
+exec --no-startup-id autokey-qt
+exec --no-startup-id antimicron
+exec --no-startup-id obs
