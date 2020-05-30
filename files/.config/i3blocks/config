@@ -48,7 +48,7 @@ command=gnome-screenshot -i
 
 [volume]
 #label=♪
-label=VOL
+label=VOL 
 interval=once
 signal=10
 #STEP=5%

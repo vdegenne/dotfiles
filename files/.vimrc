@@ -1,5 +1,9 @@
-filetype plugin on
+":startinsert
+set background=dark
+set t_Co=256
 
-call plug#begin()
-  Plug 'preservim/nerdcommenter'
-call plug#end()
+set tabstop=2
+set expandtab
+
+set autoindent
+set noswapfile

@@ -9,7 +9,7 @@
   "editor.suggestSelection": "recentlyUsed",
   "extensions.ignoreRecommendations": false,
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -2,
   "editor.mouseWheelZoom": true,
   "window.menuBarVisibility": "hidden",
   "workbench.activityBar.visible": true,
@@ -119,11 +119,10 @@
   "terminal.integrated.rendererType": "dom",
   "editor.autoClosingBrackets": "never",
   "materialTheme.accent": "Purple",
-  "workbench.colorTheme": "Pitch Black",
   "terminal.integrated.allowChords": false,
   "vim.foldfix": true,
   "editor.renderWhitespace": "all",
   "[javascript]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
 }
