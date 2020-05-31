@@ -14,7 +14,7 @@ export ZSH="/home/vdegenne/.oh-my-zsh"
 # ZSH_THEME="kardan"
 # ZSH_THEME="sammy"
 # ZSH_THEME="takashiyoshida"
-ZSH_THEME="tjkirch"
+ZSH_THEME="minimal"
 # ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
