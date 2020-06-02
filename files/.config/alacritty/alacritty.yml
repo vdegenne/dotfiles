@@ -88,16 +88,16 @@ window:
   #multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: FiraCode Retina
+    family: FiraCode Retina 
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -174,8 +174,8 @@ window:
 #colors:
   # Default colors
   #primary:
-  #  background: '#000000'
-  #  foreground: '#eaeaea'
+    background: '#000000'
+    foreground: '#eaeaea'
 
     # Bright and dim foreground colors
     #
@@ -278,7 +278,7 @@ window:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+background_opacity: 1.0
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

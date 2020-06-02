@@ -1,9 +1,9 @@
-":startinsert
-set background=dark
-set t_Co=256
+call plug#begin()
+  Plug 'preservim/nerdcommenter'
+  Plug 'preservim/nerdtree'
+  Plug 'rafalbromirski/vim-aurora'
+call plug#end()
 
-set tabstop=2
-set expandtab
-
-set autoindent
-set noswapfile
+filetype plugin on
+set termguicolors
+inoremap <Esc> <Esc>:w<CR>

@@ -216,10 +216,14 @@ bar {
         workspace_buttons no
 }
 
+
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
 set $exec exec --no-startup-id
 
 # $exec bash -c "~/.screenlayout/desktop\\ one\\ screen.sh"
-exec_always xset r rate 195 33
+exec_always xset r rate 200 35
 #$exec polybar -rq example
 #$exec picom -b
 #$exec ibus-daemon --xim -d -r
@@ -234,5 +238,3 @@ for_window [class=".*"] border pixel 1
 #exec --no-startup-id autokey-qt
 #exec --no-startup-id antimicron
 #exec --no-startup-id obs
-
-# exec feh --bg-scale ~/Pictures/Plant-Music-1162975190.jpg

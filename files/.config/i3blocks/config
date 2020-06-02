@@ -84,10 +84,10 @@ interval=10
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
-label=🌡️ 
-#label=TEMP
-interval=10
+#[temperature]
+#label=🌡️ 
+##label=TEMP
+#interval=10
 
 # Disk usage
 #
