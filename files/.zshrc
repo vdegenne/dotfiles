@@ -8,18 +8,11 @@ export ZSH="/home/vdegenne/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="half-life"
-# ZSH_THEME="dstufft"
-# ZSH_THEME="kardan"
-# ZSH_THEME="sammy"
-# ZSH_THEME="takashiyoshida"
-ZSH_THEME="minimal"
-# ZSH_THEME="random"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -71,12 +64,11 @@ ZSH_THEME="minimal"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode)
-# autoload -U compinit && compinit
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -106,23 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-stty -ixon
-export EDITOR="emacsclient"
-
-## ALIAS
-alias sudo='sudo '
-alias emacs="TERM=screen-256color emacsclient -c -nw"
-
-alias cd="TAGGED_PATH=\"$(pwd)\"; cd"
-alias there="([ -z \"$TAGGED_PATH\" ] && echo \"no tagged path to travel to\") || cd $TAGGED_PATH"
-
-# use `sudo -e <filepath>` to edit in the same local server.
-export SUDO_EDITOR="emacsclient -nw"
-
-# ?
-# zstyle '*' single-ignored complete
-
 set -o menucomplete
 
-bindkey -M emacs '^w' kill-region
-bindkey -M emacs '^[j' autosuggest-execute
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
