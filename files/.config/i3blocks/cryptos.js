@@ -1,42 +1,96 @@
-#!/usr/bin/node
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
 
-// This program makes use of 
-const http = require('http')
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+# command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
+# command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=8
+markup=pango
+min_width=100
+separator=false
 
-if (process.env.pair === undefined) {
-  throw new Error('"pair" environment variable required')
-}
-const pair = process.env.pair
+[cryptobtc]
+pair=XBT/EUR
+command=./cryptos.js
+interval=1
+min_width=0
+[link1]
+full_text=👁
+color=#ffffff
+command=google-chrome-stable https://trade.kraken.com/charts/KRAKEN:BTC-EUR 1>/dev/null
+separator=false
 
-async function main() {
-  const cryptoname = pair.split('/')[0]
-  const lastValues = JSON.parse(await fetch(`http://localhost:36005/${pair}?lasts=2`))
-  const currentValue = parseFloat(lastValues.pop())
-  let changeValue = await fetch(`http://localhost:36005/${pair}?last=1h`)
-  let changeColor = 'grey';
+[cryptoeth]
+pair=ETH/EUR
+command=./cryptos.js
+interval=1
+min_width=0
+[link2]
+full_text=👁
+color=#ffffff
+command=google-chrome-stable https://trade.kraken.com/charts/KRAKEN:ETH-EUR 1>/dev/null
+separator=false
 
-  if (changeValue) {
-    changeValue = parseFloat(changeValue)
-    if (currentValue !== changeValue) {
-      changeColor = currentValue > changeValue ? '#00ff00' : '#ef5350'
-    }
-  }
+[cryptoxmr]
+pair=XMR/EUR
+command=./cryptos.js
+interval=1
+min_width=0
+[link3]
+full_text=👁
+color=#ffffff
+command=google-chrome-stable https://trade.kraken.com/charts/KRAKEN:XMR-EUR 1>/dev/null
+separator=false
 
-  console.log(`<span color="${changeColor}">${cryptoname}</span> <span>${currentValue}</span>`)
-}
 
-main();
+[cryptowaves]
+pair=WAVES/EUR
+command=./cryptos.js
+interval=1
+min_width=0
+[linkmln]
+full_text=👁
+color=#ffffff
+command=google-chrome-stable https://trade.kraken.com/charts/KRAKEN:MLN-EUR 1>/dev/null
+separator=false
 
-function fetch(link) {
-  return new Promise(function (resolve) {
-    http.get(link, function (response) {
-      let data = '';
-      response.on('data', function (chunk) {
-        data += chunk;
-      })
-      response.on('end', function () {
-        resolve(data);
-      })
-    })
-  })
-}
+
+#[cryptoxrp]
+#pair=XRP/EUR
+#command=./cryptos.js
+#interval=1
+#min_width=0
+#[linkxrp]
+#full_text=👁
+#color=#ffffff
+#command=google-chrome-stable https://trade.kraken.com/charts/KRAKEN:XRP-EUR 1>/dev/null
+#separator=false
+
+
+[refresh]
+full_text=🔄
+command=pm2 restart kraken 1>/dev/null
+min_width=0

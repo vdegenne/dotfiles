@@ -30,6 +30,12 @@ command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[crypto-balance]
+separator=true
+command=node ~/gits/kraken-balance/main.mjs
+interval=5
+color=#00FF00
+
 # Screenshot
 [screenshot]
 full_text=📷
@@ -84,10 +90,10 @@ interval=10
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-#[temperature]
-#label=🌡️ 
-##label=TEMP
-#interval=10
+[temperature]
+label=🌡️ 
+#label=TEMP
+interval=10
 
 # Disk usage
 #
